@@ -1,0 +1,455 @@
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+   
+    {% block seo %}
+        
+    {% endblock seo %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.svg' %}">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/nouislider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/fontawesome-pro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/spacing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+
+    <!-- preloader start -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="bd-preloader-content">
+                    <div class="bd-preloader-logo">
+                        <div class="bd-preloader-circle">
+                            <svg width="190" height="190" viewBox="0 0 380 380" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle stroke="#DFE0E0" cx="190" cy="190" r="180" stroke-width="6"
+                                    stroke-linecap="round">
+                                </circle>
+                                <circle stroke="red" cx="190" cy="190" r="180" stroke-width="6" stroke-linecap="round">
+                                </circle>
+                            </svg>
+                        </div>
+                        <img src="{% static 'images/logo/preloader-icon.svg' %}" alt="">
+                    </div>
+                    <p class="bd-preloader-subtitle">Consam</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- Header area start -->
+    <header>
+        <div class="bd-header-area header-three" id="header-sticky">
+            <div class="bd-header-inner">
+                <div class="bd-header-left">
+                    <div class="bd-header-logo">
+                        <a href="index.html"><img src="{% static 'images/logo/logo-dark.svg' %}" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="bd-header-menu">
+                    <nav class="main-menu bd-mobile-menu-active d-none d-xl-block">
+                        <ul>
+                            <li class="has-mega-menu">
+                                <a href="index.html">Home</a>
+                                <ul class="mega-menu home-menu-grid">
+                                    <li>
+                                        <a href="index-one.html" class="home-menu-item">
+                                            <div class="home-menu-thumb">
+                                                <img src="{% static 'images/menu/menu-home-1.webp' %}" alt="images">
+                                            </div>
+                                            <div class="home-menu-title">Home One</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-two.html" class="home-menu-item">
+                                            <div class="home-menu-thumb">
+                                                <img src="{% static 'images/menu/menu-home-2.webp' %}" alt="images">
+                                            </div>
+                                            <div class="home-menu-title">Home Two</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-three.html" class="home-menu-item">
+                                            <div class="home-menu-thumb">
+                                                <img src="{% static 'images/menu/menu-home-3.webp' %}" alt="images">
+                                            </div>
+                                            <div class="home-menu-title">Home Three</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-one-banner.html" class="home-menu-item">
+                                            <div class="home-menu-thumb">
+                                                <img src="{% static 'images/menu/menu-home-1-banner.webp' %}" alt="images">
+                                            </div>
+                                            <div class="home-menu-title">Home One Banner</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-two-slider.html" class="home-menu-item">
+                                            <div class="home-menu-thumb">
+                                                <img src="{% static 'images/menu/menu-home-2-slider.webp' %}" alt="images">
+                                            </div>
+                                            <div class="home-menu-title">Home Two Slider</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-three-slider.html" class="home-menu-item">
+                                            <div class="home-menu-thumb">
+                                                <img src="{% static 'images/menu/menu-home-3-slider.webp' %}" alt="images">
+                                            </div>
+                                            <div class="home-menu-title">Home Three Slider</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-one-video.html" class="home-menu-item">
+                                            <div class="home-menu-thumb">
+                                                <img src="{% static 'images/menu/menu-home-1-video.webp' %}" alt="images">
+                                            </div>
+                                            <div class="home-menu-title">Home One Video</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-two-video.html" class="home-menu-item">
+                                            <div class="home-menu-thumb">
+                                                <img src="{% static 'images/menu/menu-home-2-video.webp' %}" alt="images">
+                                            </div>
+                                            <div class="home-menu-title">Home Two Video</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-three-video.html" class="home-menu-item">
+                                            <div class="home-menu-thumb">
+                                                <img src="{% static 'images/menu/menu-home-3-video.webp' %}" alt="images">
+                                            </div>
+                                            <div class="home-menu-title">Home Three Video</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">Page</a>
+                                <ul class="submenu">
+                                    <li class="menu-item-has-children has-arrow">
+                                        <a href="javascript:void(0)">Team</a>
+                                        <ul class="submenu">
+                                            <li><a href="team.html">Team</a></li>
+                                            <li><a href="team-details.html">Team Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children has-arrow">
+                                        <a href="javascript:void(0)">Portfolio</a>
+                                        <ul class="submenu">
+                                            <li><a href="portfolio.html">Portfolio</a></li>
+                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="pricing-plan.html">Pricing Plan</a></li>
+                                    <li><a href="faq.html">FAQs</a></li>
+                                    <li><a href="testimonials.html">Testimonials</a></li>
+                                    <li class="menu-item-has-children has-arrow">
+                                        <a href="javascript:void(0)">Shop</a>
+                                        <ul class="submenu">
+                                            <li><a href="product.html">Product</a></li>
+                                            <li><a href="product-details.html">Product Details</a></li>
+                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="login.html">My account</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="404.html">404</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about-us.html">About</a></li>
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">Services</a>
+                                <ul class="submenu">
+                                    <li><a href="services.html">Services</a></li>
+                                    <li><a href="service-details.html">Services Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">Blog</a>
+                                <ul class="submenu">
+                                    <li><a href="blog.html">Blog Grid</a></li>
+                                    <li><a href="blog-standard.html">Blog Standard</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="bd-header-right">
+                    <div class="bd-header-meta">
+                        <button class="bd-search-open-btn meta-icon" type="button"><i
+                                class="fa-regular fa-magnifying-glass"></i></button>
+                        <a class="bd-btn btn-primary" href="contact.html">Contact with us <i
+                                class="fa-regular fa-arrow-right-long"></i></a>
+                        <a class="bd-header-offcanvas sidebar-toggle" href="javascript:void(0)"><i
+                                class="fa-sharp fa-solid fa-grid-round-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header area end -->
+
+    <!-- Offcanvas area start -->
+    <div class="fix">
+        <div class="offcanvas-area">
+            <div class="offcanvas-wrapper">
+                <div class="offcanvas-content">
+                    <div class="offcanvas-header d-flex justify-content-between align-items-center mb-25">
+                        <div class="offcanvas-logo">
+                            <a href="index.html">
+                                <img src="{% static 'images/logo/logo-dark.svg' %}" alt="logo not found">
+                            </a>
+                        </div>
+                        <div class="offcanvas-close">
+                            <button class="offcanvas-close-icon animation--flip">
+                                <span class="offcanvas-m-lines">
+                                    <span class="offcanvas-m-line line--1"></span><span
+                                        class="offcanvas-m-line line--2"></span><span
+                                        class="offcanvas-m-line line--3"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bd-mobile-menu-smaller">
+                        <div class="bd-offcanvas-menu mb-25">
+                            <nav></nav>
+                        </div>
+                    </div>
+                    <div class="offcanvas-about d-none d-lg-block mb-25">
+                        <h4 class="offcanvas-title">About Consam</h4>
+                        <p>Explore stunning destinations and create immersive travel experiences that inspire wanderlust
+                            and
+                            captivate your audience from the start.</p>
+                    </div>
+                    <div class="offcanvas-contact mb-25">
+                        <h4 class="offcanvas-title">Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="offcanvas-contact-icon">
+                                    <a target="_blank" href="#">
+                                        <i class="fal fa-map-marker-alt"></i></a>
+                                </div>
+                                <div class="offcanvas-contact-text">
+                                    <a target="_blank" href="#">Brooklyn, NY 12207, New York</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="offcanvas-contact-icon">
+                                    <a href="tel:+8884467880"><i class="far fa-phone"></i></a>
+                                </div>
+                                <div class="offcanvas-contact-text">
+                                    <a href="tel:+8884467880">(888) 446-7880</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="offcanvas-contact-icon">
+                                    <a href="/cdn-cgi/l/email-protection#83e0ecedf0e2eec3e4eee2eaefade0ecee"><i class="fal fa-envelope"></i></a>
+                                </div>
+                                <div class="offcanvas-contact-text">
+                                    <a href="/cdn-cgi/l/email-protection#e685898895878ba6818b878f8ac885898b"><span class="__cf_email__" data-cfemail="096a66677a6864496e64686065276a6664">[email&#160;protected]</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas-social">
+                        <h4 class="offcanvas-title">Follow Us</h4>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas-overlay"></div>
+    <div class="offcanvas-overlay-white"></div>
+    <!-- Offcanvas area start -->
+
+    <!-- search popup area start here  -->
+    <div class="bd-search-popup-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bd-search-popup">
+                        <div class="bd-search-form">
+                            <form action="#">
+                                <div class="bd-search-input">
+                                    <div class="bd-search-submit">
+                                        <button type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
+                                    </div>
+                                    <input type="search" name="search" placeholder="Type here to search ...">
+                                </div>
+                            </form>
+                            <div class="bd-search-close">
+                                <div class="bd-search-close-btn">
+                                    <button><i class="fa-thin fa-close"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search popup overlay  -->
+    <div class="bd-search-overlay"></div>
+    <!-- search popup area end here  -->
+
+    {% block body %}
+        
+    {% endblock body %}
+    <!-- footer area start -->
+    <footer>
+        <div class="bd-footer-three p-relative">
+            <div class="bd-footer-shape">
+                <div class="shape-1"><img src="{% static 'images/shape/footer-shape-1.webp' %}" alt="shape"></div>
+                <div class="shape-2"><img src="{% static 'images/shape/footer-shape-2.png' %}" alt="shape"></div>
+            </div>
+            <div class="bd-footer-area">
+                <div class="container">
+                    <div class="row gy-30">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="bd-footer-widget footer-3-col-1">
+                                <div class="bd-footer-widget-logo">
+                                    <a href="index.html">
+                                        <img src="{% static 'images/logo/logo-light.svg' %}" alt="logo">
+                                    </a>
+                                </div>
+                                <div class="bd-footer-widget-content">
+                                    <p class="bd-footer-widget-description">
+                                        We provide expert Sales Strategist and Business consulting to help your are
+                                        Consam
+                                    </p>
+                                </div>
+                                <div class="bd-footer-widget">
+                                    <h6 class="bd-footer-widget-title text-white">Newsletter</h6>
+                                    <form action="#">
+                                        <div class="bd-footer-subscribe-form style-two">
+                                            <input type="email" placeholder="Email address">
+                                            <button type="submit"><i
+                                                    class="fa-regular fa-arrow-right-long"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="footer-3-col-2">
+                                <div class="bd-footer-widget">
+                                    <h6 class="bd-footer-widget-title text-white">Address</h6>
+                                    <div class="bd-footer-widget-content">
+                                        <a href="#">3891 Ranch view Richardson, California 62639</a>
+                                    </div>
+                                </div>
+                                <div class="bd-footer-widget">
+                                    <h6 class="bd-footer-widget-title text-white">Contact</h6>
+                                    <div class="bd-footer-widget-list">
+                                        <ul>
+                                            <li><a href="/cdn-cgi/l/email-protection#a8cbc7c6dbc9c5e8cfc5c9c1c486cbc7c5"><span class="__cf_email__" data-cfemail="492a26273a2824092e24282025672a2624">[email&#160;protected]</span></a></li>
+                                            <li><a href="tel:8889999988">(888 99999 88)</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="footer-3-col-3">
+                                <div class="bd-footer-widget">
+                                    <h6 class="bd-footer-widget-title text-white">Pages</h6>
+                                    <div class="bd-footer-widget-menu">
+                                        <ul>
+                                            <li><a href="about-us.html">About</a></li>
+                                            <li><a href="service.html">Service</a></li>
+                                            <li><a href="case-study.html">Case Study</a></li>
+                                            <li><a href="team.html">Team</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bd-footer-widget">
+                                    <h6 class="bd-footer-widget-title text-white">Follow Us</h6>
+                                    <div class="bd-footer-social">
+                                        <div class="social-list">
+                                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bd-footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="bd-footer-copyright-content">
+                                <p class="bd-footer-copyright-text mb-0">Copyright <span id="year"></span> Consam Theme
+                                    by
+                                    <span class="text-white fw-bold">Bdevs</span>.
+                                    All
+                                    Rights Reserved
+                                </p>
+                                <a href="#">Privacy & Cookie Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!-- back to top start-->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- back to top end -->
+
+    <!-- JS here -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script><script src="{% static 'js/vendor/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/plugins/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/plugins/swiper.min.js' %}"></script>
+    <script src="{% static 'js/plugins/wow.js' %}"></script>
+    <script src="{% static 'js/vendor/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/vendor/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/vendor/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/plugins/nice-select.min.js' %}"></script>
+    <script src="{% static 'js/plugins/nouislider.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ajax-form.js' %}"></script>
+    <script src="{% static 'js/plugins/easypie.js' %}"></script>
+    <script src="{% static 'js/vendor/purecounter.js' %}"></script>
+    <script src="{% static 'js/vendor/backtotop.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
