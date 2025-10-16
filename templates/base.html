@@ -68,6 +68,7 @@
                         <ul>
                             <li><a href="{% url 'home:home' %}">Home</a></li>
                             <li><a href="{% url 'home:about' %}">About</a></li>
+                            <li><a href="{% url 'home:service_list' %}">Our Services</a></li>
                             <li><a href="{% url 'home:team_list' %}">Team</a></li>
                             <li><a href="{% url 'home:blog' %}">Blogs</a></li>
                             <li><a href="{% url 'home:blog' %}">Contact</a></li>
@@ -77,8 +78,7 @@
                 </div>
                 <div class="bd-header-right">
                     <div class="bd-header-meta">
-                        <button class="bd-search-open-btn meta-icon" type="button"><i
-                                class="fa-regular fa-magnifying-glass"></i></button>
+                        
                         <a class="bd-btn btn-primary" href="contact.html">Contact with us <i
                                 class="fa-regular fa-arrow-right-long"></i></a>
                         <a class="bd-header-offcanvas sidebar-toggle" href="javascript:void(0)"><i
@@ -242,15 +242,15 @@
                                 <div class="bd-footer-widget">
                                     <h6 class="bd-footer-widget-title text-white">Address</h6>
                                     <div class="bd-footer-widget-content">
-                                        <a href="#">3891 Ranch view Richardson, California 62639</a>
+                                        <a href="#">Brooklyn, NY 12207, New York</a>
                                     </div>
                                 </div>
                                 <div class="bd-footer-widget">
                                     <h6 class="bd-footer-widget-title text-white">Contact</h6>
                                     <div class="bd-footer-widget-list">
                                         <ul>
-                                            <li><a href="/cdn-cgi/l/email-protection#a8cbc7c6dbc9c5e8cfc5c9c1c486cbc7c5"><span class="__cf_email__" data-cfemail="492a26273a2824092e24282025672a2624">[email&#160;protected]</span></a></li>
-                                            <li><a href="tel:8889999988">(888 99999 88)</a></li>
+                                            <li><a href="mailto:ray@compassionatecareadvisors.com"><span class="__cf_email__" data-cfemail="492a26273a2824092e24282025672a2624">ray@compassionatecareadvisors.com</span></a></li>
+                                            <li><a href="tel:+15163409995">+15 163409995</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -262,10 +262,10 @@
                                     <h6 class="bd-footer-widget-title text-white">Pages</h6>
                                     <div class="bd-footer-widget-menu">
                                         <ul>
-                                            <li><a href="about-us.html">About</a></li>
-                                            <li><a href="service.html">Service</a></li>
-                                            <li><a href="case-study.html">Case Study</a></li>
-                                            <li><a href="team.html">Team</a></li>
+                                            <li><a href="{% url 'home:about' %}">About</a></li>
+                                            <li><a href="{% url 'home:service_list' %}">Service</a></li>
+                                            
+                                            <li><a href="{% url 'home:team_list' %}">Team</a></li>
                                         </ul>
                                     </div>
                                 </div>

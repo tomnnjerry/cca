@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<main>
+
+    <!-- breadcrumb area start -->
+    <section class="bd-breadcrumb-area p-relative fix">
+        <div class="bd-breadcrumb-bg" data-background="{% if service.banner_image %}{{ service.banner_image.url }}{% else %}{% static 'assets/images/bg/breadcrumb-bg.webp' %}{% endif %}"></div>
+        <div class="bd-breadcrumb-wrapper p-relative">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                            <div class="bd-breadcrumb-content text-center">
+                                <h1 class="bd-breadcrumb-title">{{ service.title }}</h1>
+                                <div class="bd-breadcrumb-list">
+                                    <span><a href="{% url 'home:home' %}">Home</a></span>
+                                    <span><a href="#">Services</a></span>
+                                    <span>{{ service.title }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb area end -->
+
+    <!-- service details start -->
+    <section class="bd-service-details-area section-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8">
+                    <div class="bd-service-details-content">
+
+                        <!-- Main Image -->
+                        {% if service.banner_image %}
+                        <div class="bd-service-details-main-thumb mb-35">
+                            <img src="{{ service.banner_image.url }}" alt="{{ service.title }}">
+                        </div>
+                        {% endif %}
+
+                        <!-- Service Title -->
+                        <h3 class="bd-details-section-title mb-25">{{ service.title }}</h3>
+
+                        <!-- Service Content -->
+                        <div class="bd-services-details-desc mb-40">
+                            {{ service.content|safe }}
+                        </div>
+
+                        <!-- Optional Features (Example Dynamic Icons & Titles) -->
+                        {% if service.feature1 or service.feature2 %}
+                        <div class="bd-service-details-feature-wrap">
+                            {% if service.feature1 %}
+                            <div class="bd-service-details-feature">
+                                <div class="icon"><img src="{{ service.feature1_icon.url }}" alt="{{ service.feature1 }}"></div>
+                                <h5 class="title">{{ service.feature1 }}</h5>
+                            </div>
+                            {% endif %}
+                            {% if service.feature2 %}
+                            <div class="bd-service-details-feature">
+                                <div class="icon"><img src="{{ service.feature2_icon.url }}" alt="{{ service.feature2 }}"></div>
+                                <h5 class="title">{{ service.feature2 }}</h5>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+
+                        <!-- Additional Gallery -->
+                        {% if service.gallery_images.exists %}
+                        <div class="bd-details-section-gallery mb-40">
+                            {% for img in service.gallery_images.all %}
+                            <div class="bd-details-section-gallery-thumb">
+                                <img src="{{ img.image.url }}" alt="{{ service.title }}">
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <!-- FAQs -->
+                        {% if service.faqs.exists %}
+                        <h3 class="bd-details-section-title">Frequently Asked Questions</h3>
+                        <div class="bd-details-section-faq">
+                            <div class="bd-common-accordion">
+                                <div class="accordion" id="serviceAccordion">
+                                    {% for faq in service.faqs.all %}
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                                            <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.counter }}">
+                                                {{ faq.question }}
+                                            </button>
+                                        </h2>
+                                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#serviceAccordion">
+                                            <div class="accordion-body">
+                                                {{ faq.answer }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-xl-4 col-lg-4">
+                    <div class="bd-service-sidebar sidebar-sticky">
+
+                        <!-- Services List -->
+                        <div class="bd-sidebar-widget mb-30">
+                            <h5 class="bd-widget-title title-bg">Services List</h5>
+                            <div class="bd-widget-content bd-widget-list">
+                                <ul>
+                                    {% for s in data2 %}
+                                    <li {% if s.id == service.id %}class="active"{% endif %}>
+                                        <a href="{% url 'home:service_detail' s.slug %}">{{ s.title }}
+                                            <span><i class="fa-regular fa-arrow-right-long"></i></span></a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Banner -->
+                        <div class="bd-widget-banner mb-30" data-background="{% static 'assets/images/service/service-widget-bg.webp' %}">
+                            <div class="icon">
+                                <img src="{% static 'assets/images/icon/service-widget-icon.svg' %}" alt="">
+                            </div>
+                            <h4 class="title">Need Tech Service? Contact Us</h4>
+                            <p class="description">We meticulously choose partners who embody expertise, reliability</p>
+                            <a class="bd-btn btn-tertiary" href="{% url 'home:home' %}">Contact with us
+                                <i class="fa-regular fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+
+                        <!-- Download Section -->
+                        {% if service.downloads.exists %}
+                        <div class="bd-sidebar-widget">
+                            <h5 class="bd-widget-title title-bg">Download</h5>
+                            <div class="d-widget-title bd-services-widget-btn">
+                                {% for file in service.downloads.all %}
+                                <a href="{{ file.file.url }}" class="bd-download-btn {% if forloop.first %}secondary{% endif %}">
+                                    {{ file.title }}
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- service details end -->
+
+    <!-- cta area start -->
+    {% comment %} <section class="bd-cta-area section-space-big theme-bg p-relative z-3">
+        <div class="bd-cta-shape">
+            <div class="shape-1"><img src="{% static 'assets/images/shape/cta-shape-1.webp' %}" alt=""></div>
+            <div class="shape-2"><img src="{% static 'assets/images/shape/cta-shape-2.webp' %}" alt=""></div>
+        </div>
+        <div class="container">
+            <div class="row gy-30 justify-content-between align-items-center">
+                <div class="col-xl-9 col-lg-9">
+                    <h2 class="bd-section-title white-text"><span class="line">Your need the right direction</span><br class="d-none d-lg-block">
+                        for your business, we’ll help you do that.
+                    </h2>
+                </div>
+                <div class="col-xl-3 col-lg-3">
+                    <div class="bd-cta-btn d-flex justify-content-center">
+                        <img src="{% static 'assets/images/shape/cta-btn-circle.webp' %}" alt="">
+                        <a href="{% url 'home:home' %}" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+    <!-- cta area end -->
+
+</main>
+{% endblock %}

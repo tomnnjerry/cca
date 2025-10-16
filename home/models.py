@@ -91,3 +91,55 @@ class Blog(models.Model):
     
     def __str__(self):
         return self.h1 
+
+
+
+
+
+
+class Service(models.Model):
+    # Basic info
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    short_description = models.TextField(blank=True, null=True)
+    content = RichTextUploadingField()
+    
+    # Banner image
+    banner_image = models.ImageField(upload_to="services/banner/", blank=True, null=True)
+    
+    # SEO fields
+    meta_title = models.CharField(max_length=100, blank=True, null=True)
+    meta_description = models.CharField(max_length=250, blank=True, null=True)
+    meta_keywords = models.CharField(max_length=250, blank=True, null=True)
+    canonical = models.URLField(max_length=500, blank=True, null=True)
+    
+    # Open Graph / Social sharing
+    og_title = models.CharField(max_length=200, blank=True, null=True)
+    og_description = models.CharField(max_length=250, blank=True, null=True)
+    og_type = models.CharField(max_length=50, default="website")
+    og_url = models.URLField(max_length=500, blank=True, null=True)
+    og_image = models.ImageField(upload_to="services/og/", blank=True, null=True)
+    
+    # Status & timestamps
+    status = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.title
+    
+
+
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    company = models.CharField(max_length=200, blank=True, null=True)
+    message = models.TextField()
+    agree_terms = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.email}"
+
