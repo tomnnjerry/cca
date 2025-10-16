@@ -51,7 +51,7 @@
                         </div>
                         <div class="bd-about-two-meta">
                             <div class="bd-about-btn">
-                                <a class="bd-btn btn-primary" href="contact.html">Contact with us <i class="fa-regular fa-arrow-right-long"></i></a>
+                                <a class="bd-btn btn-primary" href="{% url 'home:contact' %}">Contact with us <i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                             <div class="bd-about-two-tooltip">
                                 <img src="{% static 'images/shape/about-tooltip.webp' %}" alt="tooltip">
@@ -102,9 +102,9 @@
                         <div class="bd-service-box">
                             <div class="thumb"><img src="{% static 'images/service/service-thumb-1.webp' %}" alt="HIPAA-Compliant EMR"></div>
                             <div class="bottom-content">
-                                <h4 class="title underline"><a href="service-details.html">HIPAA-Compliant EMR</a></h4>
+                                <h4 class="title underline"><a href="{% url 'home:service_list' %}">HIPAA-Compliant EMR</a></h4>
                                 <div class="bd-service-btn">
-                                    <a href="service-details.html" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a href="{% url 'home:service_list' %}" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                             </div>
                             <div class="shape"><img src="assets/images/shape/service-shape.webp" alt=""></div>
@@ -116,9 +116,9 @@
                         <div class="bd-service-box">
                             <div class="thumb"><img src="{% static 'images/service/service-thumb-2.webp' %}" alt="Digital Presence Enhancement"></div>
                             <div class="bottom-content">
-                                <h4 class="title underline"><a href="service-details.html">Digital Presence Enhancement</a></h4>
+                                <h4 class="title underline"><a href="{% url 'home:service_list' %}">Digital Presence Enhancement</a></h4>
                                 <div class="bd-service-btn">
-                                    <a href="service-details.html" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a href="{% url 'home:service_list' %}" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                             </div>
                             <div class="shape"><img src="assets/images/shape/service-shape.webp" alt=""></div>
@@ -130,9 +130,9 @@
                         <div class="bd-service-box">
                             <div class="thumb"><img src="{% static 'images/service/service-thumb-3.webp' %}" alt="Reputation Management"></div>
                             <div class="bottom-content">
-                                <h4 class="title underline"><a href="service-details.html">Reputation Management</a></h4>
+                                <h4 class="title underline"><a href="{% url 'home:service_list' %}">Reputation Management</a></h4>
                                 <div class="bd-service-btn">
-                                    <a href="service-details.html" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a href="{% url 'home:service_list' %}" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                             </div>
                             <div class="shape"><img src="assets/images/shape/service-shape.webp" alt=""></div>
@@ -144,9 +144,9 @@
                         <div class="bd-service-box">
                             <div class="thumb"><img src="{% static 'MarketAnalysisStrategy.jpg' %}" alt="Market Analysis & Strategy"></div>
                             <div class="bottom-content">
-                                <h4 class="title underline"><a href="service-details.html">Market Analysis & Strategy</a></h4>
+                                <h4 class="title underline"><a href="{% url 'home:service_list' %}">Market Analysis & Strategy</a></h4>
                                 <div class="bd-service-btn">
-                                    <a href="service-details.html" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a href="{% url 'home:service_list' %}" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                             </div>
                             <div class="shape"><img src="assets/images/shape/service-shape.webp" alt=""></div>
@@ -158,9 +158,9 @@
                         <div class="bd-service-box">
                             <div class="thumb"><img src="{% static 'PatientEngagementSolutions.png' %}" alt="Patient Engagement Solutions"></div>
                             <div class="bottom-content">
-                                <h4 class="title underline"><a href="service-details.html">Patient Engagement Solutions</a></h4>
+                                <h4 class="title underline"><a href="{% url 'home:service_list' %}">Patient Engagement Solutions</a></h4>
                                 <div class="bd-service-btn">
-                                    <a href="service-details.html" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a href="{% url 'home:service_list' %}" class="link">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                             </div>
                             <div class="shape"><img src="assets/images/shape/service-shape.webp" alt=""></div>
@@ -172,7 +172,7 @@
                         <div class="bd-service-box">
                             <div class="thumb"><img src="{% static 'images/Brand&ContentMarketing.jpg' %}" alt="Brand & Content Marketing"></div>
                             <div class="bottom-content">
-                                <h4 class="title underline"><a href="service-details.html">Brand & Content Marketing</a></h4>
+                                <h4 class="title underline"><a href="{% url 'home:service_list' %}">Brand & Content Marketing</a></h4>
                                 <div class="bd-blog-btn">
                                     <a href="blog-details.html" class="bd-text-btn"><span class="icon"><i class="fa-light fa-arrow-right"></i></span></a>
                                 </div>
@@ -233,7 +233,7 @@
                                 <h2 class="bd-section-title">Your Guide to Common Questions</h2>
                             </div>
                             <div class="bd-faq-btn">
-                                <a class="bd-btn btn-primary" href="contact.html">Contact with us <i class="fa-regular fa-arrow-right-long"></i></a>
+                                <a class="bd-btn btn-primary" href="{% url 'home:contact' %}">Contact with us <i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -420,7 +420,7 @@
                             </p>
                         </div>
                         <div class="bd-testimonial-meta d-flex flex-wrap align-items-center gap-30">
-                            <a class="bd-btn btn-tertiary" href="contact.html">Contact with us <i class="fa-regular fa-arrow-right-long"></i></a>
+                            <a class="bd-btn btn-tertiary" href="{% url 'home:contact' %}">Contact with us <i class="fa-regular fa-arrow-right-long"></i></a>
                             <div class="trustpilot d-flex align-items-center gap-15">
                                 <div class="icon"><img src="{% static 'images/shape/trustpilot-icon.webp' %}" alt=""></div>
                                 <div class="">
@@ -521,12 +521,10 @@
                                 <img src="{% static 'images/bg/contact-bg-1.webp' %}" alt="">
                             </div>
                             <div class="bd-contact-cta">
-                                <div class="icon" style="width:40px; height:40px; background:#dee2e6; display:flex; align-items:center; justify-content:center; border-radius:50%;">
-                                    <span style="color:#888;">Icon</span>
-                                </div>
+                                <div class="icon"><i class="fa-sharp fa-solid fa-phone-volume"></i></div>
                                 <div class="">
                                     <p>You May <span class="primary-text fw-bold">Call Us</span> For Appointment</p>
-                                    <h6><a href="tel:+8884467880">(888) 446-7880</a></h6>
+                                    <h6><a href="tel:+15163409995">+15163409995</a></h6>
                                 </div>
                             </div>
                         </div>
@@ -705,7 +703,7 @@
                             <div style="width:60px; height:60px; background:#dee2e6; display:flex; align-items:center; justify-content:center; border-radius:50%; margin-right:10px;">
                                 <span style="color:#888;">Shape</span>
                             </div>
-                            <a href="contact.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                            <a href="{% url 'home:contact' %}" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                         </div>
                     </div>
                 </div>

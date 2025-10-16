@@ -32,7 +32,7 @@
                         <div class="bd-banner-left">
                             <p class="bd-banner-desc">Compassionate Care Advisors helps medical practices streamline care with our secure EMR and accelerate growth with tailored digital marketing, SEO, and reputation management—so you can focus on patients.</p>
                             <div class="bd-banner-btn">
-                                <a class="bd-btn btn-secondary" href="contact.html">Book a Demo
+                                <a class="bd-btn btn-secondary" href="{% url 'home:contact' %}">Book a Demo
                                     <i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                 <div class="d-flex gap-30 flex-wrap justify-content-between align-items-center">
                     <div class="bd-about-cta-btn">
                         <img src="{% static 'images/shape/about-cta-btn.webp' %}" alt="about-cta-btn">
-                        <a href="about-us.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <a href="{% url 'home:about' %}" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                     </div>
                     <div class="bd-about-three-exp">
                         <h3 class="bd-about-exp-number"><span data-purecounter-duration="1"
@@ -154,7 +154,7 @@
                         the right patients—so your team can deliver outstanding care and scale with confidence.
                     </p>
                     <div class="bd-about-btn">
-                        <a class="bd-btn btn-primary" href="about-us.html">Explore Our Story <i
+                        <a class="bd-btn btn-primary" href="{% url 'home:about' %}">Explore Our Story <i
                                 class="fa-regular fa-arrow-right-long"></i></a>
                     </div>
                 </div>
@@ -202,10 +202,10 @@
                             <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
                             <div class="thumb"><img src="https://placehold.co/600x350?text=EMR" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">HIPAA-Compliant EMR</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">HIPAA-Compliant EMR</a></h5>
                                 <p class="desc">Streamline clinical workflows with an intuitive, secure, fully compliant EMR built for modern practices.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -226,10 +226,10 @@
                             <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
                             <div class="thumb"><img src="https://placehold.co/600x350?text=Digital+Presence" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Digital Presence Enhancement</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Digital Presence Enhancement</a></h5>
                                 <p class="desc">SEO, websites, and social strategies that elevate visibility and connect you with the right patients.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -250,10 +250,10 @@
                             <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
                             <div class="thumb"><img src="https://placehold.co/600x350?text=Reputation" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Reputation Management</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Reputation Management</a></h5>
                                 <p class="desc">Monitor reviews, respond to feedback, and build a trusted brand patients choose first.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,10 +274,10 @@
                             <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
                             <div class="thumb"><img src="https://placehold.co/600x350?text=Market+Strategy" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Market Analysis & Strategy</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Market Analysis & Strategy</a></h5>
                                 <p class="desc">Turn patient and competitor insights into targeted campaigns that fuel predictable growth.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -298,10 +298,10 @@
                             <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
                             <div class="thumb"><img src="https://placehold.co/600x350?text=Engagement" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Patient Engagement Solutions</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Patient Engagement Solutions</a></h5>
                                 <p class="desc">Portals, reminders, and surveys that improve communication, retention, and outcomes.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -322,10 +322,10 @@
                             <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
                             <div class="thumb"><img src="https://placehold.co/600x350?text=Brand+%26+Content" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Brand & Content Marketing</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Brand & Content Marketing</a></h5>
                                 <p class="desc">Build authority with storytelling, educational content, and visuals that patients trust.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -342,7 +342,7 @@
 
                     <div class="d-flex flex-wrap text-center align-items-center justify-content-center gap-10 text-white fs-18 fw-medium mt-50 wow bdFadeInUp"
                         data-wow-duration="0.5s" data-wow-delay=".9s">What People are Saying Our Consultation Service ?
-                        <span><img src="https://placehold.co/100x24?text=Trustpilot" alt=""></span>
+                        <div class="icon"><img src="{% static 'images/shape/trustpilot-icon.webp' %}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -573,7 +573,7 @@
                             strategies to empower clinics, hospitals, and private practices. Our tailored solutions
                             improve patient engagement, strengthen reputation, and accelerate measurable growth.
                         </p>
-                        <a class="bd-btn btn-quaternary" href="contact.html">Contact Us <i
+                        <a class="bd-btn btn-quaternary" href="{% url 'home:contact' %}">Contact Us <i
                                 class="fa-regular fa-arrow-right-long"></i></a>
                     </div>
                     <div class="shape">
@@ -587,12 +587,47 @@
 <!-- feature area end -->
 
 
+
     <!-- team area start -->
 <section class="bd-team-area section-space theme-bg p-relative z-3 box-section">
     <div class="bd-team-three-shape">
         <div class="shape-1"><img src="{% static 'images/shape/team-shape-3.webp' %}" alt=""></div>
         <div class="shape-2"><img src="{% static 'images/shape/team-shape-4.png' %}" alt=""></div>
     </div>
+
+
+    {% comment %} <div class="swiper teamThreeSlideActive wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".6s">
+    <div class="swiper-wrapper">
+        {% for team in teams %}
+        <div class="swiper-slide">
+            <div class="bd-team-item-three">
+                <div class="bd-team-item-three-thumb">
+                    <a href="team-details.html">
+                        <img src="{{ team.image.url }}" alt="{{ team.name }}">
+                    </a>
+                </div>
+                <div class="bd-team-item-three-content">
+                    <div class="">
+                        <h5 class="name underline">
+                            <a href="team-details.html">{{ team.name }}</a>
+                        </h5>
+                        <span class="designation">{{ team.position }}</span>
+                    </div>
+                    <div class="">
+                        <a href="team-details.html" class="link">
+                            <i class="fa-regular fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="bd-team-pagination">
+        <div class="dots-pagination secondary justify-content-center mt-50"></div>
+    </div>
+</div> {% endcomment %}
     <div class="container">
         <div class="row gy-30 justify-content-between align-items-end section-title-space wow bdFadeInUp"
             data-wow-duration="0.5s" data-wow-delay=".5s">
@@ -604,10 +639,10 @@
             </div>
             <div class="col-xl-4 col-lg-4">
                 <div class="bd-section-btn d-flex gap-30 align-items-center justify-content-md-end">
-                    <a href="about-us.html" class="bd-text-btn-two">Join Our Team
+                    <a href="{% url 'home:about' %}" class="bd-text-btn-two">Join Our Team
                         <span><i class="fa-light fa-arrow-right"></i></span>
                     </a>
-                    <a class="bd-btn btn-tertiary" href="team.html">View All</a>
+                    <a class="bd-btn btn-tertiary" href="{% url 'home:team_list' %}">View All</a>
                 </div>
             </div>
         </div>
@@ -618,15 +653,15 @@
                 <div class="swiper-slide">
                     <div class="bd-team-item-three">
                         <div class="bd-team-item-three-thumb">
-                            <a href="team-details.html"><img src="{% static 'images/team/team-member-11.webp' %}" alt="team"></a>
+                            <a href="#"><img src="{% static 'images/team/team-member-11.webp' %}" alt="team"></a>
                         </div>
                         <div class="bd-team-item-three-content">
                             <div class="">
-                                <h5 class="name underline"><a href="team-details.html">Dr. Amanda Collins</a></h5>
+                                <h5 class="name underline"><a href="#">Dr. Amanda Collins</a></h5>
                                 <span class="designation">Chief Medical Growth Officer</span>
                             </div>
                             <div class="">
-                                <a href="team-details.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -636,15 +671,15 @@
                 <div class="swiper-slide">
                     <div class="bd-team-item-three">
                         <div class="bd-team-item-three-thumb">
-                            <a href="team-details.html"><img src="{% static 'images/team/team-member-12.webp' %}" alt="team"></a>
+                            <a href="#"><img src="{% static 'images/team/team-member-12.webp' %}" alt="team"></a>
                         </div>
                         <div class="bd-team-item-three-content">
                             <div class="">
-                                <h5 class="name underline"><a href="team-details.html">Michael Turner</a></h5>
+                                <h5 class="name underline"><a href="#">Michael Turner</a></h5>
                                 <span class="designation">Digital Marketing Director</span>
                             </div>
                             <div class="">
-                                <a href="team-details.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -654,15 +689,15 @@
                 <div class="swiper-slide">
                     <div class="bd-team-item-three">
                         <div class="bd-team-item-three-thumb">
-                            <a href="team-details.html"><img src="{% static 'images/team/team-member-13.webp' %}" alt="team"></a>
+                            <a href="#"><img src="{% static 'images/team/team-member-13.webp' %}" alt="team"></a>
                         </div>
                         <div class="bd-team-item-three-content">
                             <div class="">
-                                <h5 class="name underline"><a href="team-details.html">Linda Matthews</a></h5>
+                                <h5 class="name underline"><a href="#">Linda Matthews</a></h5>
                                 <span class="designation">Operations & Compliance Lead</span>
                             </div>
                             <div class="">
-                                <a href="team-details.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -672,15 +707,15 @@
                 <div class="swiper-slide">
                     <div class="bd-team-item-three">
                         <div class="bd-team-item-three-thumb">
-                            <a href="team-details.html"><img src="{% static 'images/team/team-member-14.webp' %}" alt="team"></a>
+                            <a href="#"><img src="{% static 'images/team/team-member-14.webp' %}" alt="team"></a>
                         </div>
                         <div class="bd-team-item-three-content">
                             <div class="">
-                                <h5 class="name underline"><a href="team-details.html">Sophia Bennett</a></h5>
+                                <h5 class="name underline"><a href="#">Sophia Bennett</a></h5>
                                 <span class="designation">Patient Experience Strategist</span>
                             </div>
                             <div class="">
-                                <a href="team-details.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -690,15 +725,15 @@
                 <div class="swiper-slide">
                     <div class="bd-team-item-three">
                         <div class="bd-team-item-three-thumb">
-                            <a href="team-details.html"><img src="{% static 'images/team/team-member-15.webp' %}" alt="team"></a>
+                            <a href="#"><img src="{% static 'images/team/team-member-15.webp' %}" alt="team"></a>
                         </div>
                         <div class="bd-team-item-three-content">
                             <div class="">
-                                <h5 class="name underline"><a href="team-details.html">James Carter</a></h5>
+                                <h5 class="name underline"><a href="#">James Carter</a></h5>
                                 <span class="designation">Healthcare IT & EMR Specialist</span>
                             </div>
                             <div class="">
-                                <a href="team-details.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -708,15 +743,15 @@
                 <div class="swiper-slide">
                     <div class="bd-team-item-three">
                         <div class="bd-team-item-three-thumb">
-                            <a href="team-details.html"><img src="{% static 'images/team/team-member-16.webp' %}" alt="team"></a>
+                            <a href="#"><img src="{% static 'images/team/team-member-16.webp' %}" alt="team"></a>
                         </div>
                         <div class="bd-team-item-three-content">
                             <div class="">
-                                <h5 class="name underline"><a href="team-details.html">Natalie Brooks</a></h5>
+                                <h5 class="name underline"><a href="#">Natalie Brooks</a></h5>
                                 <span class="designation">Financial Growth Consultant</span>
                             </div>
                             <div class="">
-                                <a href="team-details.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -739,13 +774,13 @@
             <div class="col-xl-5 col-lg-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".5s">
                 <div class="bd-testimonial-thumb-wrap p-relative">
                     <div class="bd-testimonial-thumb">
-                        <img src="https://placehold.co/600x600/0C6E6D/FFFFFF?text=Compassionate+Care+Advisors" alt="testimonial-bg">
+                        <img src="{% static 'testimonial-bg-2.webp'%}" alt="testimonial-bg">
                     </div>
                     <div class="bd-testimonial-thumb-info">
                         <div class="">
                             <span class="title">Reviews on</span>
                             <div class="thumb">
-                                <img src="{% static 'images/logo/logo-dark.svg' %}" alt="logo">
+                                <img src="{% static 'CCA-Logo.png' %}" alt="logo" style="width:40px; height:40px;">
                             </div>
                         </div>
                         <div class="">
@@ -928,7 +963,7 @@
         <!-- gallery area start -->
         <div class="bd-gallery-area bd-gallery-section box-section wow bdFadeInUp" data-wow-duration="0.5s"
             data-wow-delay=".5s">
-            <div class="bd-gallery-bg" data-background="{% static 'images/bg/gallery-thumb.webp' %}"></div>
+            <div class="bd-gallery-bg" data-background="{% static 'gallery-thumb.webp' %}"></div>
             <div class="container">
                 <div class="row justify-content-end">
                     <div class="col-xl-6 col-lg-8 col-md-10">
@@ -946,7 +981,7 @@
                                     experience</p>
                                 <div class="bottom d-flex flex-wrap align-items-center justify-content-between gap-15">
                                     <span class="primary-text">Don’t miss the latest news</span>
-                                    <div class="icon"><img src="{% static 'images/icon/gallery-icon.svg' %}" alt=""></div>
+                                    <div class="icon"> <img src="{% static 'CCA-Logo.png' %}" alt="logo" style="width:80px; height:80px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -971,8 +1006,8 @@
                     <div class="col-xl-12">
                         <div class="bd-blog-box">
                             <div class="bd-blog-card-five">
-                                <span class="bd-badge bg-label-tertiary"><a href="blog.html">Business</a></span>
-                                <h5 class="title underline-two"><a href="blog-details.html">Where Strategy Meets Insight
+                                <span class="bd-badge bg-label-tertiary"><a href="{% url 'home:blog' %}">Business</a></span>
+                                <h5 class="title underline-two"><a href="{% url 'home:blog' %}">Where Strategy Meets Insight
                                         for Sustainable
                                         Success</a>
                                 </h5>
@@ -984,15 +1019,15 @@
                                 <div class="bd-blog-meta justify-content-between">
                                     <div class="bd-blog-author">
                                         <div class="thumb"><img src="{% static 'images/avatar/avatar-03.webp' %}" alt=""></div>
-                                        <span>by <a class="name" href="blog.html">Jessica Rose</a></span>
+                                        <span>by <a class="name" href="{% url 'home:blog' %}">Jessica Rose</a></span>
                                     </div>
-                                    <a href="blog-details.html" class="bd-blog-comments">
+                                    <a href="{% url 'home:blog' %}" class="bd-blog-comments">
                                         <img src="{% static 'images/icon/comments-icon-2.svg' %}" alt="">
                                         50
                                     </a>
                                 </div>
                                 <div class="bd-blog-btn">
-                                    <a href="blog-details.html" class="bd-text-btn secondary">Read More
+                                    <a href="{% url 'home:blog' %}" class="bd-text-btn secondary">Read More
                                         <span class="icon"><i class="fa-light fa-arrow-right"></i></span>
                                     </a>
                                 </div>
@@ -1000,23 +1035,23 @@
                             <div class="blog-list-wrapper">
                                 <div class="bd-blog-card-six mb-30">
                                     <div class="bd-blog-thumb">
-                                        <a href="blog-details.html"><img src="{% static 'images/blog/blog-thumb-07.webp' %}"
+                                        <a href="{% url 'home:blog' %}"><img src="{% static 'images/blog/blog-thumb-07.webp' %}"
                                                 alt=""></a>
                                     </div>
                                     <div class="bd-blog-content">
                                         <span class="bd-badge bg-label-primary"><a
-                                                href="blog-details.html">Business</a></span>
-                                        <h5 class="title underline"><a href="blog-details.html">Expert Strategies for
+                                                href="{% url 'home:blog' %}">Business</a></span>
+                                        <h5 class="title underline"><a href="{% url 'home:blog' %}">Expert Strategies for
                                                 Growth, Leadership, and
                                                 Innovation</a></h5>
                                         <div class="bd-blog-meta justify-content-between">
                                             <div class="bd-blog-author">
                                                 <div class="thumb"><img src="{% static 'images/avatar/avatar-06.webp' %}"
                                                         alt=""></div>
-                                                <span>by <a class="name" href="blog-details.html">Madison
+                                                <span>by <a class="name" href="{% url 'home:blog' %}">Madison
                                                         Loren</a></span>
                                             </div>
-                                            <a href="blog-details.html" class="bd-blog-comments">
+                                            <a href="{% url 'home:blog' %}" class="bd-blog-comments">
                                                 <img src="{% static 'images/icon/comments-icon.svg' %}" alt="">
                                                 50
                                             </a>
@@ -1025,23 +1060,23 @@
                                 </div>
                                 <div class="bd-blog-card-six">
                                     <div class="bd-blog-thumb">
-                                        <a href="blog-details.html"><img src="{% static 'images/blog/blog-thumb-08.webp' %}"
+                                        <a href="{% url 'home:blog' %}"><img src="{% static 'images/blog/blog-thumb-08.webp' %}"
                                                 alt=""></a>
                                     </div>
                                     <div class="bd-blog-content">
                                         <span class="bd-badge bg-label-primary"><a
-                                                href="blog-details.html">Business</a></span>
-                                        <h5 class="title underline"><a href="blog-details.html">Actionable Business
+                                                href="{% url 'home:blog' %}">Business</a></span>
+                                        <h5 class="title underline"><a href="{% url 'home:blog' %}">Actionable Business
                                                 Advice for Every Stage of
                                                 Growth</a></h5>
                                         <div class="bd-blog-meta justify-content-between">
                                             <div class="bd-blog-author">
                                                 <div class="thumb"><img src="{% static 'images/avatar/avatar-07.webp' %}"
                                                         alt=""></div>
-                                                <span>by <a class="name" href="blog-details.html">Austin
+                                                <span>by <a class="name" href="{% url 'home:blog' %}">Austin
                                                         Malborn</a></span>
                                             </div>
-                                            <a href="blog-details.html" class="bd-blog-comments">
+                                            <a href="{% url 'home:blog' %}" class="bd-blog-comments">
                                                 <img src="{% static 'images/icon/comments-icon.svg' %}" alt="">
                                                 50
                                             </a>
@@ -1141,7 +1176,7 @@
                                     </div>
                                 </div>
                                 <div class="left-content wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".5s">
-                                    <a class="bd-btn btn-white" href="contact.html">Contact Now</a>
+                                    <a class="bd-btn btn-white" href="{% url 'home:contact' %}">Contact Now</a>
                                     <div class="bd-cta-icon-btn">
                                         <div class="icon"><i class="fa-sharp fa-solid fa-phone-volume"></i></div>
                                         <div class="">

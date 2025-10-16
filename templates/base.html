@@ -71,7 +71,7 @@
                             <li><a href="{% url 'home:service_list' %}">Our Services</a></li>
                             <li><a href="{% url 'home:team_list' %}">Team</a></li>
                             <li><a href="{% url 'home:blog' %}">Blogs</a></li>
-                            <li><a href="{% url 'home:blog' %}">Contact</a></li>
+                            <li><a href="{% url 'home:contact' %}">Contact</a></li>
                             
                         </ul>
                     </nav>
@@ -79,7 +79,7 @@
                 <div class="bd-header-right">
                     <div class="bd-header-meta">
                         
-                        <a class="bd-btn btn-primary" href="contact.html">Contact with us <i
+                        <a class="bd-btn btn-primary" href="{% url 'home:contact' %}">Contact with us <i
                                 class="fa-regular fa-arrow-right-long"></i></a>
                         <a class="bd-header-offcanvas sidebar-toggle" href="javascript:void(0)"><i
                                 class="fa-sharp fa-solid fa-grid-round-2"></i></a>
@@ -290,12 +290,11 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="bd-footer-copyright-content">
-                                <p class="bd-footer-copyright-text mb-0">Copyright <span id="year"></span> Consam Theme
-                                    by
-                                    <span class="text-white fw-bold">Bdevs</span>.
-                                    All
-                                    Rights Reserved
+                                <p class="bd-footer-copyright-text mb-0">
+                                    Copyright © 2024 Compassionate Care Advisors, All Rights Reserved. 
+                                    Developed by <span class="text-white fw-bold">Corunit Media Corp</span>.
                                 </p>
+
                                 <a href="#">Privacy & Cookie Policy</a>
                             </div>
                         </div>

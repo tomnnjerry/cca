@@ -9,8 +9,9 @@ from .forms import ContactForm
 
 # Create your views here.
 def home(request):
+    teams = Team.objects.all()
     context = {
-
+        'teams': teams,
     }
     return render(request, 'index.html', context)
 
