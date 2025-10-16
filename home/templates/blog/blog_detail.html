@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+<title>{{ data.meta_title }}</title>
+<meta name="description" content="{{ data.meta_description }}">
+<link rel="canonical" href="{{ data.canonical }}">
+<meta property="og:type" content="{{ data.og_type }}">
+<meta property="og:title" content="{{ data.og_title }}">
+<meta property="og:description" content="{{ data.og_description }}">
+<meta property="og:image" content="{{ data.image.url }}">
+{% endblock seo %}
+
+{% block body %}
+<main>
+
+    <!-- breadcrumb area start -->
+    <section class="bd-breadcrumb-area p-relative fix">
+        <div class="bd-breadcrumb-bg" data-background="{{ data.banner_image.url }}"></div>
+        <div class="bd-breadcrumb-wrapper p-relative">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                            <div class="bd-breadcrumb-content text-center">
+                                <h1 class="bd-breadcrumb-title">{{ data.breadcrumb }}</h1>
+                                <div class="bd-breadcrumb-list">
+                                    <span><a href="{% url 'home:home' %}">Home</a></span>
+                                    <span><a href="{% url 'home:blog' %}">Blog</a></span>
+                                    <span>{{ data.h1 }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb area end -->
+
+    <!-- blog area start -->
+    <section class="bd-blog-area section-space">
+        <div class="container">
+            <div class="row gy-30">
+                <!-- Blog content -->
+                <div class="col-xl-8 col-lg-8">
+                    <div class="bd-post-details-wrapper">
+                        <div class="bd-post-details-content">
+
+                            <div class="bd-post-details-thumb mb-30">
+                                <img src="{{ data.image.url }}" alt="{{ data.h1 }}">
+                            </div>
+
+                            <div class="bd-blog-meta flex-wrap mb-2">
+                                <span class="me-3"><i class="fa-regular fa-calendar"></i> {{ data.published|date:"F d, Y" }}</span>
+                            </div>
+
+                            <h2 class="bd-blog-main-title underline mb-20">{{ data.title }}</h2>
+
+                            <div class="bd-blog-description mb-25">
+                                {{ data.content|safe }}
+                            </div>
+
+                            {% if data.edits %}
+                            <div class="bd-blog-description mb-25">
+                                {{ data.edits|safe }}
+                            </div>
+                            {% endif %}
+{% comment %} 
+                            {% if data.category.all %}
+                            <div class="bd-blog-bottom-tag mb-20">
+                                <h6>Categories:</h6>
+                                <div class="tagcloud">
+                                    {% for cat in data.category.all %}
+                                    <a href="#">{{ cat.name }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endif %}
+
+                            {% if data.tag.all %}
+                            <div class="bd-blog-bottom-tag mb-50">
+                                <h6>Tags:</h6>
+                                <div class="tagcloud">
+                                    {% for t in data.tag.all %}
+                                    <a href="#">{{ t.name }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endif %} {% endcomment %}
+
+                        </div>
+
+                        <div class="bd-postbox-navigation mb-50">
+                            <a class="bd-postbox-perv-btn" href="{% url 'home:blog' %}">
+                                <span class="icon"><i class="fa-sharp fa-solid fa-arrow-left"></i></span>
+                                Back to Blogs
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-xl-4 col-lg-4">
+                    <div class="bd-blog-sidebar sidebar-sticky">
+
+                        <div class="bd-sidebar-widget widget-latest-posts mb-30">
+                            <h5 class="bd-widget-title title-bg">Recent Posts</h5>
+                            <div class="bd-widget-content">
+                                {% for item in data2 %}
+                                <div class="bd-recent-post-item">
+                                    <div class="bd-recent-post-thumb">
+                                        <a href="{% url 'home:blog_detail' item.slug %}">
+                                            <img src="{{ item.image.url }}" alt="{{ item.h1 }}">
+                                        </a>
+                                    </div>
+                                    <div class="bd-recent-post-content">
+                                        <h6 class="bd-recent-post-title underline">
+                                            <a href="{% url 'home:blog_detail' item.slug %}">{{ item.title|truncatechars:40 }}</a>
+                                        </h6>
+                                        <div class="bd-recent-post-meta">
+                                            <span class="icon"><i class="fa-light fa-calendar-days"></i></span>
+                                            <span class="date">{{ item.published|date:"d M, Y" }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- blog area end -->
+
+</main>
+{% endblock body %}

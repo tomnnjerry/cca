@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+
+{% endblock seo %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+    <main>
+    <!-- breadcrumb area start -->
+    <section class="bd-breadcrumb-area p-relative fix">
+        <div class="bd-breadcrumb-bg" data-background="{% static 'images/bg/breadcrumb-bg.webp' %}"></div>
+        <div class="bd-breadcrumb-wrapper p-relative">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                            <div class="bd-breadcrumb-content text-center">
+                                <h1 class="bd-breadcrumb-title">Blog</h1>
+                                <div class="bd-breadcrumb-list">
+                                    <span><a href="{% url 'home:home' %}">Home</a></span>
+                                    <span>Blogs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb area end -->
+
+    <!-- blog area start -->
+    <section class="bd-blog-area section-space">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="bd-section-title-wrapper section-title-space text-center">
+                        <span class="bd-section-subtitle">Latest Blog</span>
+                        <h2 class="bd-section-title">Explore Our Latest Insights</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-30">
+                {% for post in data %}
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <article class="bd-blog-card wow bdFadeInUp" data-wow-duration="0.3s" data-wow-delay=".{{ forloop.counter }}s">
+                        <div class="bd-blog-header">
+                            <div class="bd-blog-thumb">
+                                <a href="{% url 'home:blog_detail' post.slug %}">
+                                    <img src="{{ post.image.url }}" alt="{{ post.h1 }}">
+                                </a>
+                            </div>
+                            {% if post.category.all %}
+                            {% for cat in post.category.all %}
+                                <span class="bd-badge bg-label-secondary">
+                                    <a href="#">{{ cat.category }}</a>
+                                </span>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="bd-blog-body">
+                            <div class="bd-blog-meta justify-content-between">
+                                <div class="bd-blog-author">
+                                    <div class="thumb"><img src="{% static 'images/avatar/avatar-01.webp' %}" alt=""></div>
+                                    <span><a class="name" href="#">Team Compassionate Care Advisors</a></span>
+                                </div>
+                                <span class="bd-blog-comments">
+                                    <img src="{% static 'images/icon/comments-icon.svg' %}" alt=""> {{ post.published }}
+                                </span>
+                            </div>
+                            <h5 class="title underline">
+                                <a href="{% url 'home:blog_detail' post.slug %}">{{ post.h1 }}</a>
+                            </h5>
+                        </div>
+                        <div class="bd-blog-footer">
+                            <div class="bd-blog-btn">
+                                <a href="{% url 'home:blog_detail' post.slug %}" class="bd-text-btn">Read More
+                                    <span class="icon"><i class="fa-light fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock body %}
+    
+
+
+{% block js %}
+    
+{% endblock js %}
+    
+
+
+

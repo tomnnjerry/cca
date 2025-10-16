@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+<title>Our Team | {{ site_name }}</title>
+<meta name="description" content="Meet the expert professionals behind {{ site_name }}. Our team is dedicated to helping your business grow and thrive.">
+{% endblock seo %}
+
+{% block css %}
+<!-- Add any page-specific CSS here if needed -->
+{% endblock css %}
+
+{% block body %}
+
+<main>
+
+    <!-- breadcrumb area start -->
+    <section class="bd-breadcrumb-area p-relative fix">
+        <div class="bd-breadcrumb-bg" data-background="{% static 'assets/images/bg/breadcrumb-bg.webp' %}"></div>
+        <div class="bd-breadcrumb-wrapper p-relative">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                            <div class="bd-breadcrumb-content text-center">
+                                <h1 class="bd-breadcrumb-title">Team</h1>
+                                <div class="bd-breadcrumb-list">
+                                    <span><a href="{% url 'home:home' %}">Home</a></span>
+                                    <span>Team</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb area end -->
+
+    <!-- team area start -->
+    <section class="bd-team-area section-space">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-6">
+                    <div class="bd-section-title-wrapper section-title-space text-center">
+                        <span class="bd-section-subtitle">team members</span>
+                        <h2 class="bd-section-title mb-20">Meet Our Strategic Members</h2>
+                        <p class="bd-section-desc">
+                            Our team consists of experienced professionals dedicated to helping your business succeed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-30">
+                {% for member in teams %}
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <div class="bd-team-item-one">
+                        <div class="bd-team-thumb">
+                            <a href="{% url 'home:team_detail' member.slug %}">
+                                {% if member.image %}
+                                    <img src="{{ member.image.url }}" alt="{{ member.name }}">
+                                {% else %}
+                                    <img src="{% static 'assets/images/team/default.webp' %}" alt="{{ member.name }}">
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="bd-team-info">
+                            <h5 class="name underline">
+                                <a href="{% url 'home:team_detail' member.slug %}">{{ member.name }}</a>
+                            </h5>
+                            <span class="designation">{{ member.position }}</span>
+                        </div>
+                        <div class="bd-team-action">
+                            <ul>
+                                <li>
+                                    <span class="icon"><i class="far fa-share-alt"></i></span>
+                                    <div class="bd-team-social">
+                                        <ul>
+                                            {% if member.facebook %}
+                                            <li><a href="{{ member.facebook }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            {% endif %}
+                                            {% if member.twitter %}
+                                            <li><a href="{{ member.twitter }}" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                                            {% endif %}
+                                            {% if member.linkedin %}
+                                            <li><a href="{{ member.linkedin }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                            {% endif %}
+                                            {% if member.instagram %}
+                                            <li><a href="{{ member.instagram }}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12 text-center">
+                    <p>No team members have been added yet.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- team area end -->
+
+</main>
+
+{% endblock body %}
+
+{% block js %}
+<!-- Add any page-specific JS if needed -->
+{% endblock js %}
