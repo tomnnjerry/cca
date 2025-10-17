@@ -32,7 +32,7 @@
                         <div class="bd-banner-left">
                             <p class="bd-banner-desc">Compassionate Care Advisors helps medical practices streamline care with our secure EMR and accelerate growth with tailored digital marketing, SEO, and reputation management—so you can focus on patients.</p>
                             <div class="bd-banner-btn">
-                                <a class="bd-btn btn-secondary" href="contact.html">Book a Demo
+                                <a class="bd-btn btn-secondary" href="{% url 'home:contact' %}">Book a Demo
                                     <i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                 <div class="d-flex gap-30 flex-wrap justify-content-between align-items-center">
                     <div class="bd-about-cta-btn">
                         <img src="{% static 'images/shape/about-cta-btn.webp' %}" alt="about-cta-btn">
-                        <a href="about-us.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        <a href="{% url 'home:about' %}" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                     </div>
                     <div class="bd-about-three-exp">
                         <h3 class="bd-about-exp-number"><span data-purecounter-duration="1"
@@ -154,7 +154,7 @@
                         the right patients—so your team can deliver outstanding care and scale with confidence.
                     </p>
                     <div class="bd-about-btn">
-                        <a class="bd-btn btn-primary" href="about-us.html">Explore Our Story <i
+                        <a class="bd-btn btn-primary" href="{% url 'home:about' %}">Explore Our Story <i
                                 class="fa-regular fa-arrow-right-long"></i></a>
                     </div>
                 </div>
@@ -199,13 +199,13 @@
                     <!-- Service 1 -->
                     <div class="col-xl-4 col-lg-4 col-md-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".3s">
                         <div class="bd-service-three">
-                            <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
-                            <div class="thumb"><img src="https://placehold.co/600x350?text=EMR" alt=""></div>
+                            <div class="icon"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/icon/service-icon-1.svg" alt=""></div>
+                            <div class="thumb"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/service/service-3-thumb-1.webp" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">HIPAA-Compliant EMR</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">HIPAA-Compliant EMR</a></h5>
                                 <p class="desc">Streamline clinical workflows with an intuitive, secure, fully compliant EMR built for modern practices.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -223,13 +223,13 @@
                     <!-- Service 2 -->
                     <div class="col-xl-4 col-lg-4 col-md-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".4s">
                         <div class="bd-service-three">
-                            <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
-                            <div class="thumb"><img src="https://placehold.co/600x350?text=Digital+Presence" alt=""></div>
+                            <div class="icon"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/icon/service-icon-2.svg" alt=""></div>
+                            <div class="thumb"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/service/service-3-thumb-2.webp" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Digital Presence Enhancement</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Digital Presence Enhancement</a></h5>
                                 <p class="desc">SEO, websites, and social strategies that elevate visibility and connect you with the right patients.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -247,13 +247,13 @@
                     <!-- Service 3 -->
                     <div class="col-xl-4 col-lg-4 col-md-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".5s">
                         <div class="bd-service-three">
-                            <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
-                            <div class="thumb"><img src="https://placehold.co/600x350?text=Reputation" alt=""></div>
+                            <div class="icon"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/icon/service-icon-3.svg" alt=""></div>
+                            <div class="thumb"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/service/service-3-thumb-3.webp" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Reputation Management</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Reputation Management</a></h5>
                                 <p class="desc">Monitor reviews, respond to feedback, and build a trusted brand patients choose first.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -271,13 +271,13 @@
                     <!-- Service 4 -->
                     <div class="col-xl-4 col-lg-4 col-md-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".6s">
                         <div class="bd-service-three">
-                            <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
-                            <div class="thumb"><img src="https://placehold.co/600x350?text=Market+Strategy" alt=""></div>
+                            <div class="icon"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/icon/service-icon-4.svg" alt=""></div>
+                            <div class="thumb"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/service/service-3-thumb-4.webp" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Market Analysis & Strategy</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Market Analysis & Strategy</a></h5>
                                 <p class="desc">Turn patient and competitor insights into targeted campaigns that fuel predictable growth.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -295,13 +295,13 @@
                     <!-- Service 5 (new) -->
                     <div class="col-xl-4 col-lg-4 col-md-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".7s">
                         <div class="bd-service-three">
-                            <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
-                            <div class="thumb"><img src="https://placehold.co/600x350?text=Engagement" alt=""></div>
+                            <div class="icon"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/icon/service-icon-1.svg" alt=""></div>
+                            <div class="thumb"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/service/service-3-thumb-5.webp" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Patient Engagement Solutions</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Patient Engagement Solutions</a></h5>
                                 <p class="desc">Portals, reminders, and surveys that improve communication, retention, and outcomes.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -319,13 +319,13 @@
                     <!-- Service 6 (new) -->
                     <div class="col-xl-4 col-lg-4 col-md-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".8s">
                         <div class="bd-service-three">
-                            <div class="icon"><img src="https://placehold.co/64x64?text=Icon" alt=""></div>
-                            <div class="thumb"><img src="https://placehold.co/600x350?text=Brand+%26+Content" alt=""></div>
+                            <div class="icon"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/icon/service-icon-1.svg" alt=""></div>
+                            <div class="thumb"><img src="https://demo.bdevs.net/html/consam-prev/assets/images/service/service-3-thumb-6.webp" alt=""></div>
                             <div class="bd-service-content">
-                                <h5 class="title underline"><a href="service-details.html">Brand & Content Marketing</a></h5>
+                                <h5 class="title underline"><a href="{% url 'home:service_list' %}">Brand & Content Marketing</a></h5>
                                 <p class="desc">Build authority with storytelling, educational content, and visuals that patients trust.</p>
                                 <div class="bd-service-btn">
-                                    <a class="bd-btn btn-outline-light" href="service-details.html">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
+                                    <a class="bd-btn btn-outline-light" href="{% url 'home:service_list' %}">Read More <i class="fa-regular fa-arrow-right-long"></i></a>
                                 </div>
                                 <div class="bd-service-content-bg">
                                     <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -342,7 +342,7 @@
 
                     <div class="d-flex flex-wrap text-center align-items-center justify-content-center gap-10 text-white fs-18 fw-medium mt-50 wow bdFadeInUp"
                         data-wow-duration="0.5s" data-wow-delay=".9s">What People are Saying Our Consultation Service ?
-                        <span><img src="https://placehold.co/100x24?text=Trustpilot" alt=""></span>
+                        <div class="icon"><img src="{% static 'images/shape/trustpilot-icon.webp' %}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -396,7 +396,7 @@
         <div class="row gy-30 align-items-center justify-content-between">
             <div class="col-xl-7 col-lg-7 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".4s">
                 <div class="bd-why-choose-thumb">
-                    <img src="https://placehold.co/700x500?text=Healthcare+Marketing+Team" alt="why-choose-cca">
+                    <img src="{% static 'YourPartnerinMedicalPracticeGrowth.png' %}" alt="why-choose-cca">
                 </div>
             </div>
             <div class="col-xl-5 col-lg-5">
@@ -573,7 +573,7 @@
                             strategies to empower clinics, hospitals, and private practices. Our tailored solutions
                             improve patient engagement, strengthen reputation, and accelerate measurable growth.
                         </p>
-                        <a class="bd-btn btn-quaternary" href="contact.html">Contact Us <i
+                        <a class="bd-btn btn-quaternary" href="{% url 'home:contact' %}">Contact Us <i
                                 class="fa-regular fa-arrow-right-long"></i></a>
                     </div>
                     <div class="shape">
@@ -587,461 +587,383 @@
 <!-- feature area end -->
 
 
-        <!-- team area start -->
-        <section class="bd-team-area section-space theme-bg p-relative z-3 box-section">
-            <div class="bd-team-three-shape">
-                <div class="shape-1"><img src="{% static 'images/shape/team-shape-3.webp' %}" alt=""></div>
-                <div class="shape-2"><img src="{% static 'images/shape/team-shape-4.png' %}" alt=""></div>
-            </div>
-            <div class="container">
-                <div class="row gy-30 justify-content-between align-items-end section-title-space wow bdFadeInUp"
-                    data-wow-duration="0.5s" data-wow-delay=".5s">
-                    <div class="col-xl-7 col-lg-8">
-                        <div class="bd-section-title-wrapper">
-                            <span class="bd-section-subtitle secondary">team members</span>
-                            <h2 class="bd-section-title white-text">Introducing Our Strategic Team</h2>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4">
-                        <div class="bd-section-btn d-flex gap-30 align-items-center justify-content-md-end">
-                            <a href="about-us.html" class="bd-text-btn-two">Join Our Team
-                                <span><i class="fa-light fa-arrow-right"></i></span>
-                            </a>
-                            <a class="bd-btn btn-tertiary" href="team.html">View All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper teamThreeSlideActive wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".6s">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="bd-team-item-three">
-                                <div class="bd-team-item-three-thumb">
-                                    <a href="team-details.html"><img src="{% static 'images/team/team-member-11.webp' %}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="bd-team-item-three-content">
-                                    <div class="">
-                                        <h5 class="name underline"><a href="team-details.html">Simmons Brooklyn</a></h5>
-                                        <span class="designation">Sr. Manager</span>
-                                    </div>
-                                    <div class="">
-                                        <a href="team-details.html" class="link"><i
-                                                class="fa-regular fa-arrow-right-long"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="bd-team-item-three">
-                                <div class="bd-team-item-three-thumb">
-                                    <a href="team-details.html"><img src="{% static 'images/team/team-member-12.webp' %}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="bd-team-item-three-content">
-                                    <div class="">
-                                        <h5 class="name underline"><a href="team-details.html">Darlene Robert</a></h5>
-                                        <span class="designation">Finance Advisor</span>
-                                    </div>
-                                    <div class="">
-                                        <a href="team-details.html" class="link"><i
-                                                class="fa-regular fa-arrow-right-long"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="bd-team-item-three">
-                                <div class="bd-team-item-three-thumb">
-                                    <a href="team-details.html"><img src="{% static 'images/team/team-member-13.webp' %}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="bd-team-item-three-content">
-                                    <div class="">
-                                        <h5 class="name underline"><a href="team-details.html">Linda F. Collins</a></h5>
-                                        <span class="designation">Manager</span>
-                                    </div>
-                                    <div class="">
-                                        <a href="team-details.html" class="link"><i
-                                                class="fa-regular fa-arrow-right-long"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="bd-team-item-three">
-                                <div class="bd-team-item-three-thumb">
-                                    <a href="team-details.html"><img src="{% static 'images/team/team-member-14.webp' %}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="bd-team-item-three-content">
-                                    <div class="">
-                                        <h5 class="name underline"><a href="team-details.html">Sophia Bennett</a></h5>
-                                        <span class="designation">Business Consultant</span>
-                                    </div>
-                                    <div class="">
-                                        <a href="team-details.html" class="link"><i
-                                                class="fa-regular fa-arrow-right-long"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="bd-team-item-three">
-                                <div class="bd-team-item-three-thumb">
-                                    <a href="team-details.html"><img src="{% static 'images/team/team-member-15.webp' %}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="bd-team-item-three-content">
-                                    <div class="">
-                                        <h5 class="name underline"><a href="team-details.html">James Carter</a></h5>
-                                        <span class="designation">Manager</span>
-                                    </div>
-                                    <div class="">
-                                        <a href="team-details.html" class="link"><i
-                                                class="fa-regular fa-arrow-right-long"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="bd-team-item-three">
-                                <div class="bd-team-item-three-thumb">
-                                    <a href="team-details.html"><img src="{% static 'images/team/team-member-16.webp' %}"
-                                            alt="image"></a>
-                                </div>
-                                <div class="bd-team-item-three-content">
-                                    <div class="">
-                                        <h5 class="name underline"><a href="team-details.html">Natalie Brooks</a></h5>
-                                        <span class="designation">Financial Consultant</span>
-                                    </div>
-                                    <div class="">
-                                        <a href="team-details.html" class="link"><i
-                                                class="fa-regular fa-arrow-right-long"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bd-team-pagination">
-                        <div class="dots-pagination secondary justify-content-center mt-50"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- team area end -->
 
-        <!-- testimonial area start -->
-        <section class="bd-testimonial-area section-space">
-            <div class="container">
-                <div class="row gy-30">
-                    <div class="col-xl-5 col-lg-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".5s">
-                        <div class="bd-testimonial-thumb-wrap p-relative">
-                            <div class="bd-testimonial-thumb">
-                                <img src="{% static 'images/bg/testimonial-bg-2.webp' %}" alt="">
+    <!-- team area start -->
+<section class="bd-team-area section-space theme-bg p-relative z-3 box-section">
+    <div class="bd-team-three-shape">
+        <div class="shape-1"><img src="{% static 'images/shape/team-shape-3.webp' %}" alt=""></div>
+        <div class="shape-2"><img src="{% static 'images/shape/team-shape-4.png' %}" alt=""></div>
+    </div>
+
+
+    {% comment %} <div class="swiper teamThreeSlideActive wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".6s">
+    <div class="swiper-wrapper">
+        {% for team in teams %}
+        <div class="swiper-slide">
+            <div class="bd-team-item-three">
+                <div class="bd-team-item-three-thumb">
+                    <a href="team-details.html">
+                        <img src="{{ team.image.url }}" alt="{{ team.name }}">
+                    </a>
+                </div>
+                <div class="bd-team-item-three-content">
+                    <div class="">
+                        <h5 class="name underline">
+                            <a href="team-details.html">{{ team.name }}</a>
+                        </h5>
+                        <span class="designation">{{ team.position }}</span>
+                    </div>
+                    <div class="">
+                        <a href="team-details.html" class="link">
+                            <i class="fa-regular fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="bd-team-pagination">
+        <div class="dots-pagination secondary justify-content-center mt-50"></div>
+    </div>
+</div> {% endcomment %}
+    <div class="container">
+        <div class="row gy-30 justify-content-between align-items-end section-title-space wow bdFadeInUp"
+            data-wow-duration="0.5s" data-wow-delay=".5s">
+            <div class="col-xl-7 col-lg-8">
+                <div class="bd-section-title-wrapper">
+                    <span class="bd-section-subtitle secondary">Our Experts</span>
+                    <h2 class="bd-section-title white-text">Meet the Team Driving Practice Growth</h2>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4">
+                <div class="bd-section-btn d-flex gap-30 align-items-center justify-content-md-end">
+                    <a href="{% url 'home:about' %}" class="bd-text-btn-two">Join Our Team
+                        <span><i class="fa-light fa-arrow-right"></i></span>
+                    </a>
+                    <a class="bd-btn btn-tertiary" href="{% url 'home:team_list' %}">View All</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper teamThreeSlideActive wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".6s">
+            <div class="swiper-wrapper">
+                <!-- Team Member 1 -->
+                <div class="swiper-slide">
+                    <div class="bd-team-item-three">
+                        <div class="bd-team-item-three-thumb">
+                            <a href="#"><img src="{% static 'images/team/team-member-11.webp' %}" alt="team"></a>
+                        </div>
+                        <div class="bd-team-item-three-content">
+                            <div class="">
+                                <h5 class="name underline"><a href="#">Dr. Amanda Collins</a></h5>
+                                <span class="designation">Chief Medical Growth Officer</span>
                             </div>
-                            <div class="bd-testimonial-thumb-info">
-                                <div class="">
-                                    <span class="title">Review on</span>
-                                    <div class="thumb"><img src="{% static 'images/logo/logo-dark.svg' %}" alt=""></div>
-                                </div>
-                                <div class="">
-                                    <div class="icon">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <span class="reviews">75 Reviews</span>
-                                </div>
+                            <div class="">
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-7 col-lg-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".6s">
-                        <div class="bd-testimonial-three">
-                            <div class="bd-section-title-wrapper">
-                                <span class="bd-section-subtitle">testimonial</span>
-                                <h2 class="bd-section-title mb-20">What our customer say?</h2>
-                                <span class="bd-testimonial-satisfaction">99% satisfaction customer</span>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="swiper-slide">
+                    <div class="bd-team-item-three">
+                        <div class="bd-team-item-three-thumb">
+                            <a href="#"><img src="{% static 'images/team/team-member-12.webp' %}" alt="team"></a>
+                        </div>
+                        <div class="bd-team-item-three-content">
+                            <div class="">
+                                <h5 class="name underline"><a href="#">Michael Turner</a></h5>
+                                <span class="designation">Digital Marketing Director</span>
                             </div>
-                            <div class="swiper testimonialActive">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="bd-testimonial-wrapper">
-                                            <div class="bd-testimonial-content">
-                                                <div class="bd-testimonial-content-meta">
-                                                    <div class="bd-testimonial-quotation">
-                                                        <img src="{% static 'images/icon/testimonial-quote-icon-3.svg' %}"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="bd-testimonial-rating">
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <p class="bd-testimonial-description">
-                                                    “ We value the trust our clients place in us. Their honest reviews
-                                                    highlight the
-                                                    effectiveness of our services and how we’ve helped them navigate
-                                                    challenges,
-                                                    innovate, and achieve lasting success.
-                                                </p>
-                                                <div class="bd-testimonial-avatar">
-                                                    <div class="thumb">
-                                                        <img src="{% static 'images/avatar/avatar-01.webp' %}" alt="">
-                                                    </div>
-                                                    <div class="meta">
-                                                        <h5 class="name">Leslie Alexander</h5>
-                                                        <span>Manager</span>
-                                                    </div>
-                                                </div>
+                            <div class="">
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="swiper-slide">
+                    <div class="bd-team-item-three">
+                        <div class="bd-team-item-three-thumb">
+                            <a href="#"><img src="{% static 'images/team/team-member-13.webp' %}" alt="team"></a>
+                        </div>
+                        <div class="bd-team-item-three-content">
+                            <div class="">
+                                <h5 class="name underline"><a href="#">Linda Matthews</a></h5>
+                                <span class="designation">Operations & Compliance Lead</span>
+                            </div>
+                            <div class="">
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="swiper-slide">
+                    <div class="bd-team-item-three">
+                        <div class="bd-team-item-three-thumb">
+                            <a href="#"><img src="{% static 'images/team/team-member-14.webp' %}" alt="team"></a>
+                        </div>
+                        <div class="bd-team-item-three-content">
+                            <div class="">
+                                <h5 class="name underline"><a href="#">Sophia Bennett</a></h5>
+                                <span class="designation">Patient Experience Strategist</span>
+                            </div>
+                            <div class="">
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="swiper-slide">
+                    <div class="bd-team-item-three">
+                        <div class="bd-team-item-three-thumb">
+                            <a href="#"><img src="{% static 'images/team/team-member-15.webp' %}" alt="team"></a>
+                        </div>
+                        <div class="bd-team-item-three-content">
+                            <div class="">
+                                <h5 class="name underline"><a href="#">James Carter</a></h5>
+                                <span class="designation">Healthcare IT & EMR Specialist</span>
+                            </div>
+                            <div class="">
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="swiper-slide">
+                    <div class="bd-team-item-three">
+                        <div class="bd-team-item-three-thumb">
+                            <a href="#"><img src="{% static 'images/team/team-member-16.webp' %}" alt="team"></a>
+                        </div>
+                        <div class="bd-team-item-three-content">
+                            <div class="">
+                                <h5 class="name underline"><a href="#">Natalie Brooks</a></h5>
+                                <span class="designation">Financial Growth Consultant</span>
+                            </div>
+                            <div class="">
+                                <a href="#" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bd-team-pagination">
+                <div class="dots-pagination secondary justify-content-center mt-50"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- team area end -->
+
+    <!-- testimonial area start -->
+<section class="bd-testimonial-area section-space">
+    <div class="container">
+        <div class="row gy-30">
+            <!-- Left side image/review badge -->
+            <div class="col-xl-5 col-lg-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".5s">
+                <div class="bd-testimonial-thumb-wrap p-relative">
+                    <div class="bd-testimonial-thumb">
+                        <img src="{% static 'testimonial-bg-2.webp'%}" alt="testimonial-bg">
+                    </div>
+                    <div class="bd-testimonial-thumb-info">
+                        <div class="">
+                            <span class="title">Reviews on</span>
+                            <div class="thumb">
+                                <img src="{% static 'CCA-Logo.png' %}" alt="logo" style="width:40px; height:40px;">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="icon">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="reviews">100+ Verified Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="col-xl-7 col-lg-6 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".6s">
+                <div class="bd-testimonial-three">
+                    <div class="bd-section-title-wrapper">
+                        <span class="bd-section-subtitle">Testimonials</span>
+                        <h2 class="bd-section-title mb-20">What Our Clients Say</h2>
+                        <span class="bd-testimonial-satisfaction">99% client satisfaction</span>
+                    </div>
+
+                    <div class="swiper testimonialActive">
+                        <div class="swiper-wrapper">
+                            <!-- Testimonial 1 -->
+                            <div class="swiper-slide">
+                                <div class="bd-testimonial-wrapper">
+                                    <div class="bd-testimonial-content">
+                                        <div class="bd-testimonial-content-meta">
+                                            <div class="bd-testimonial-quotation">
+                                                <img src="{% static 'images/icon/testimonial-quote-icon-3.svg' %}" alt="quote">
+                                            </div>
+                                            <div class="bd-testimonial-rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bd-testimonial-description">
+                                            “CCA has handled my marketing for over four years. When COVID hit, they helped me pivot and adapt my plan.
+                                            They understood my business deeply and guided me through a stressful time — helping me stay visible and grow stronger.”
+                                        </p>
+                                        <div class="bd-testimonial-avatar">
+                                            <div class="thumb">
+                                                <img src="https://placehold.co/80x80/0C6E6D/FFFFFF?text=N" alt="Neil Madho">
+                                            </div>
+                                            <div class="meta">
+                                                <h5 class="name">Neil Madho</h5>
+                                                <span>Medical Practice Owner</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="bd-testimonial-wrapper">
-                                            <div class="bd-testimonial-content">
-                                                <div class="bd-testimonial-content-meta">
-                                                    <div class="bd-testimonial-quotation">
-                                                        <img src="{% static 'images/icon/testimonial-quote-icon-3.svg' %}"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="bd-testimonial-rating">
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </div>
-                                                </div>
-                                                <p class="bd-testimonial-description">
-                                                    “ We value the trust our clients place in us. Their honest reviews
-                                                    highlight the
-                                                    effectiveness of our services and how we’ve helped them navigate
-                                                    challenges,
-                                                    innovate, and achieve lasting success.
-                                                </p>
-                                                <div class="bd-testimonial-avatar">
-                                                    <div class="thumb">
-                                                        <img src="{% static 'images/avatar/avatar-02.webp' %}" alt="">
-                                                    </div>
-                                                    <div class="meta">
-                                                        <h5 class="name">Natalie Brooks</h5>
-                                                        <span>Manager</span>
-                                                    </div>
-                                                </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 2 -->
+                            <div class="swiper-slide">
+                                <div class="bd-testimonial-wrapper">
+                                    <div class="bd-testimonial-content">
+                                        <div class="bd-testimonial-content-meta">
+                                            <div class="bd-testimonial-quotation">
+                                                <img src="{% static 'images/icon/testimonial-quote-icon-3.svg' %}" alt="quote">
+                                            </div>
+                                            <div class="bd-testimonial-rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bd-testimonial-description">
+                                            “I’ve worked with CCA for two years — they’ve been honest, dependable, and most importantly, effective.
+                                            I trusted them with both digital marketing and EMR support, and they delivered beyond expectations.”
+                                        </p>
+                                        <div class="bd-testimonial-avatar">
+                                            <div class="thumb">
+                                                <img src="https://placehold.co/80x80/007C91/FFFFFF?text=M" alt="Matthew Dell'Olio">
+                                            </div>
+                                            <div class="meta">
+                                                <h5 class="name">Matthew Dell’Olio</h5>
+                                                <span>Practice Administrator</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bd-testimonial-navigation">
-                                    <button class="testimonial-navigation-prev">
-                                        <i class="fa-regular fa-angle-left"></i>
-                                    </button>
-                                    <button class="testimonial-navigation-next">
-                                        <i class="fa-regular fa-angle-right"></i>
-                                    </button>
-                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- testimonial area end -->
 
-        <!-- price area start -->
-        <section class="bd-price-area section-space bd-section-liner-bg">
-            <div class="container">
-                <div class="row justify-content-center wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".5s">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="bd-section-title-wrapper section-title-space text-center">
-                            <span class="bd-section-subtitle">price plan</span>
-                            <h2 class="bd-section-title mb-20">the best pricing plans</h2>
-                            <p class="bd-section-desc">But I must explain to you how all this mistaken idea of
-                                denouncing
-                                pleasure and praising pain was born and I will give you a complete account.
-                            </p>
-                            <div class="bd-pricing-plan-btn-group">
-                                <button class="monthly-plan-btn active" type="button">Monthly</button>
-                                <button class="yearly-plan-btn" type="button">Yearly</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gy-30 justify-content-md-center">
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow bdFadeInUp" data-wow-duration="0.5s"
-                        data-wow-delay=".4s">
-                        <div class="bd-pricing-plan-card">
-                            <div class="price-header">
-                                <h4 class="plan-title">Basic plan</h4>
-                                <div class="plan-price-wrap">
-                                    <h3 class="plan-price monthly-pricing" style="display: block;">$ 150 <span>/
-                                            Month</span>
-                                    </h3>
-                                    <h3 class="plan-price yearly-pricing" style="display: none;">$ 1800 <span>/
-                                            Year</span></h3>
+                            <!-- Testimonial 3 -->
+                            <div class="swiper-slide">
+                                <div class="bd-testimonial-wrapper">
+                                    <div class="bd-testimonial-content">
+                                        <div class="bd-testimonial-content-meta">
+                                            <div class="bd-testimonial-quotation">
+                                                <img src="{% static 'images/icon/testimonial-quote-icon-3.svg' %}" alt="quote">
+                                            </div>
+                                            <div class="bd-testimonial-rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bd-testimonial-description">
+                                            “I’ve partnered with CCA for years. During COVID, they helped me transition to digital-first strategies.
+                                            I increased my investment and saw great returns — their direction was worth every penny.”
+                                        </p>
+                                        <div class="bd-testimonial-avatar">
+                                            <div class="thumb">
+                                                <img src="https://placehold.co/80x80/009688/FFFFFF?text=D" alt="Dan Suthakar">
+                                            </div>
+                                            <div class="meta">
+                                                <h5 class="name">Dan Suthakar</h5>
+                                                <span>Healthcare Consultant</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="price-body">
-                                <ul class="price-list">
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Business Solution
-                                    </li>
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Market Report Analysis
-                                    </li>
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Great Customer Support
-                                    </li>
-                                    <li>
-                                        <span class="list-icon danger">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </span>
-                                        Market Growth Solution
-                                    </li>
-                                    <li>
-                                        <span class="list-icon danger">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </span>
-                                        24/7 Consultant Service
-                                    </li>
-                                </ul>
-                                <div class="price-btn">
-                                    <a class="bd-btn btn-outline-light w-100" href="contact.html">Buy Now</a>
+
+                            <!-- Testimonial 4 -->
+                            <div class="swiper-slide">
+                                <div class="bd-testimonial-wrapper">
+                                    <div class="bd-testimonial-content">
+                                        <div class="bd-testimonial-content-meta">
+                                            <div class="bd-testimonial-quotation">
+                                                <img src="{% static 'images/icon/testimonial-quote-icon-3.svg' %}" alt="quote">
+                                            </div>
+                                            <div class="bd-testimonial-rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="bd-testimonial-description">
+                                            “The CCA team is always professional and courteous. Every interaction has been smooth and productive.
+                                            Their consistent communication and support make them a trusted partner for long-term growth.”
+                                        </p>
+                                        <div class="bd-testimonial-avatar">
+                                            <div class="thumb">
+                                                <img src="https://placehold.co/80x80/004D40/FFFFFF?text=C" alt="Chris Cortes">
+                                            </div>
+                                            <div class="meta">
+                                                <h5 class="name">Chris Cortes</h5>
+                                                <span>Practice Operations Lead</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow bdFadeInUp" data-wow-duration="0.5s"
-                        data-wow-delay=".5s">
-                        <div class="bd-pricing-plan-card active-plan">
-                            <div class="price-header">
-                                <h4 class="plan-title">Standard Plan</h4>
-                                <div class="plan-price-wrap">
-                                    <h3 class="plan-price monthly-pricing" style="display: block;">$ 250 <span>/
-                                            Month</span>
-                                    </h3>
-                                    <h3 class="plan-price yearly-pricing" style="display: none;">$ 3000 <span>/
-                                            Year</span></h3>
-                                </div>
-                                <div class="price-shape-1"><img src="{% static 'images/shape/price-shape-1.webp' %}" alt="">
-                                </div>
-                                <div class="price-shape-2"><img src="{% static 'images/shape/price-shape-2.webp' %}" alt="">
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <ul class="price-list">
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Business Solution
-                                    </li>
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Market Report Analysis
-                                    </li>
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Great Customer Support
-                                    </li>
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Market Growth Solution
-                                    </li>
-                                    <li>
-                                        <span class="list-icon danger">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </span>
-                                        24/7 Consultant Service
-                                    </li>
-                                </ul>
-                                <div class="price-btn">
-                                    <a class="bd-btn btn-primary w-100" href="contact.html">Buy Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow bdFadeInUp" data-wow-duration="0.5s"
-                        data-wow-delay=".6s">
-                        <div class="bd-pricing-plan-card">
-                            <div class="price-header">
-                                <h4 class="plan-title">Professional plan</h4>
-                                <div class="plan-price-wrap">
-                                    <h3 class="plan-price monthly-pricing" style="display: block;">$ 350 <span>/
-                                            Month</span>
-                                    </h3>
-                                    <h3 class="plan-price yearly-pricing" style="display: none;">$ 4200 <span>/
-                                            Year</span></h3>
-                                </div>
-                            </div>
-                            <div class="price-body">
-                                <ul class="price-list">
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Business Solution
-                                    </li>
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Market Report Analysis
-                                    </li>
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Great Customer Support
-                                    </li>
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        Market Growth Solution
-                                    </li>
-                                    <li>
-                                        <span class="list-icon success">
-                                            <i class="fa-solid fa-check"></i>
-                                        </span>
-                                        24/7 Consultant Service
-                                    </li>
-                                </ul>
-                                <div class="price-btn">
-                                    <a class="bd-btn btn-outline-light w-100" href="contact.html">Buy Now</a>
-                                </div>
-                            </div>
+
+                        <!-- Navigation -->
+                        <div class="bd-testimonial-navigation">
+                            <button class="testimonial-navigation-prev">
+                                <i class="fa-regular fa-angle-left"></i>
+                            </button>
+                            <button class="testimonial-navigation-next">
+                                <i class="fa-regular fa-angle-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- price area end -->
+        </div>
+    </div>
+</section>
+<!-- testimonial area end -->
+
+        
 
         <!-- gallery area start -->
         <div class="bd-gallery-area bd-gallery-section box-section wow bdFadeInUp" data-wow-duration="0.5s"
             data-wow-delay=".5s">
-            <div class="bd-gallery-bg" data-background="{% static 'images/bg/gallery-thumb.webp' %}"></div>
+            <div class="bd-gallery-bg" data-background="{% static 'gallery-thumb.webp' %}"></div>
             <div class="container">
                 <div class="row justify-content-end">
                     <div class="col-xl-6 col-lg-8 col-md-10">
@@ -1059,7 +981,7 @@
                                     experience</p>
                                 <div class="bottom d-flex flex-wrap align-items-center justify-content-between gap-15">
                                     <span class="primary-text">Don’t miss the latest news</span>
-                                    <div class="icon"><img src="{% static 'images/icon/gallery-icon.svg' %}" alt=""></div>
+                                    <div class="icon"> <img src="{% static 'CCA-Logo.png' %}" alt="logo" style="width:80px; height:80px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -1084,8 +1006,8 @@
                     <div class="col-xl-12">
                         <div class="bd-blog-box">
                             <div class="bd-blog-card-five">
-                                <span class="bd-badge bg-label-tertiary"><a href="blog.html">Business</a></span>
-                                <h5 class="title underline-two"><a href="blog-details.html">Where Strategy Meets Insight
+                                <span class="bd-badge bg-label-tertiary"><a href="{% url 'home:blog' %}">Business</a></span>
+                                <h5 class="title underline-two"><a href="{% url 'home:blog' %}">Where Strategy Meets Insight
                                         for Sustainable
                                         Success</a>
                                 </h5>
@@ -1097,15 +1019,15 @@
                                 <div class="bd-blog-meta justify-content-between">
                                     <div class="bd-blog-author">
                                         <div class="thumb"><img src="{% static 'images/avatar/avatar-03.webp' %}" alt=""></div>
-                                        <span>by <a class="name" href="blog.html">Jessica Rose</a></span>
+                                        <span>by <a class="name" href="{% url 'home:blog' %}">Jessica Rose</a></span>
                                     </div>
-                                    <a href="blog-details.html" class="bd-blog-comments">
+                                    <a href="{% url 'home:blog' %}" class="bd-blog-comments">
                                         <img src="{% static 'images/icon/comments-icon-2.svg' %}" alt="">
                                         50
                                     </a>
                                 </div>
                                 <div class="bd-blog-btn">
-                                    <a href="blog-details.html" class="bd-text-btn secondary">Read More
+                                    <a href="{% url 'home:blog' %}" class="bd-text-btn secondary">Read More
                                         <span class="icon"><i class="fa-light fa-arrow-right"></i></span>
                                     </a>
                                 </div>
@@ -1113,23 +1035,23 @@
                             <div class="blog-list-wrapper">
                                 <div class="bd-blog-card-six mb-30">
                                     <div class="bd-blog-thumb">
-                                        <a href="blog-details.html"><img src="{% static 'images/blog/blog-thumb-07.webp' %}"
+                                        <a href="{% url 'home:blog' %}"><img src="{% static 'images/blog/blog-thumb-07.webp' %}"
                                                 alt=""></a>
                                     </div>
                                     <div class="bd-blog-content">
                                         <span class="bd-badge bg-label-primary"><a
-                                                href="blog-details.html">Business</a></span>
-                                        <h5 class="title underline"><a href="blog-details.html">Expert Strategies for
+                                                href="{% url 'home:blog' %}">Business</a></span>
+                                        <h5 class="title underline"><a href="{% url 'home:blog' %}">Expert Strategies for
                                                 Growth, Leadership, and
                                                 Innovation</a></h5>
                                         <div class="bd-blog-meta justify-content-between">
                                             <div class="bd-blog-author">
                                                 <div class="thumb"><img src="{% static 'images/avatar/avatar-06.webp' %}"
                                                         alt=""></div>
-                                                <span>by <a class="name" href="blog-details.html">Madison
+                                                <span>by <a class="name" href="{% url 'home:blog' %}">Madison
                                                         Loren</a></span>
                                             </div>
-                                            <a href="blog-details.html" class="bd-blog-comments">
+                                            <a href="{% url 'home:blog' %}" class="bd-blog-comments">
                                                 <img src="{% static 'images/icon/comments-icon.svg' %}" alt="">
                                                 50
                                             </a>
@@ -1138,23 +1060,23 @@
                                 </div>
                                 <div class="bd-blog-card-six">
                                     <div class="bd-blog-thumb">
-                                        <a href="blog-details.html"><img src="{% static 'images/blog/blog-thumb-08.webp' %}"
+                                        <a href="{% url 'home:blog' %}"><img src="{% static 'images/blog/blog-thumb-08.webp' %}"
                                                 alt=""></a>
                                     </div>
                                     <div class="bd-blog-content">
                                         <span class="bd-badge bg-label-primary"><a
-                                                href="blog-details.html">Business</a></span>
-                                        <h5 class="title underline"><a href="blog-details.html">Actionable Business
+                                                href="{% url 'home:blog' %}">Business</a></span>
+                                        <h5 class="title underline"><a href="{% url 'home:blog' %}">Actionable Business
                                                 Advice for Every Stage of
                                                 Growth</a></h5>
                                         <div class="bd-blog-meta justify-content-between">
                                             <div class="bd-blog-author">
                                                 <div class="thumb"><img src="{% static 'images/avatar/avatar-07.webp' %}"
                                                         alt=""></div>
-                                                <span>by <a class="name" href="blog-details.html">Austin
+                                                <span>by <a class="name" href="{% url 'home:blog' %}">Austin
                                                         Malborn</a></span>
                                             </div>
-                                            <a href="blog-details.html" class="bd-blog-comments">
+                                            <a href="{% url 'home:blog' %}" class="bd-blog-comments">
                                                 <img src="{% static 'images/icon/comments-icon.svg' %}" alt="">
                                                 50
                                             </a>
@@ -1254,7 +1176,7 @@
                                     </div>
                                 </div>
                                 <div class="left-content wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".5s">
-                                    <a class="bd-btn btn-white" href="contact.html">Contact Now</a>
+                                    <a class="bd-btn btn-white" href="{% url 'home:contact' %}">Contact Now</a>
                                     <div class="bd-cta-icon-btn">
                                         <div class="icon"><i class="fa-sharp fa-solid fa-phone-volume"></i></div>
                                         <div class="">

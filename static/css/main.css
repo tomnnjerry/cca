@@ -169,7 +169,8 @@ h6, .body__overlay {
   --color-medium: #9DBEBD;
   --color-light: #9C9C9C;
   --color-placeholder: #676E6E;
-  --color-primary: #0C6E6D;
+  --color-primary: #1531bd;
+  /* --color-primary: #0C6E6D; */
   --color-secondary: #F9D67B;
   --color-success: #198754;
   --color-info: #0dcaf0;

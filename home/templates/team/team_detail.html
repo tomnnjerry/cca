@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<main>
+    <!-- breadcrumb -->
+    <section class="bd-breadcrumb-area p-relative fix">
+        <div class="bd-breadcrumb-bg" data-background="{% static 'images/bg/breadcrumb-bg.webp' %}"></div>
+        <div class="bd-breadcrumb-wrapper p-relative">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                            <div class="bd-breadcrumb-content text-center">
+                                <h1 class="bd-breadcrumb-title">Team Details</h1>
+                                <div class="bd-breadcrumb-list">
+                                    <span><a href="{% url 'home:home' %}">Home</a></span>
+                                    <span><a href="{% url 'home:team_list' %}">Team</a></span>
+                                    <span>{{ team.name }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- team details -->
+    <section class="bd-team-details-area section-space">
+        <div class="container">
+            <div class="row gy-30">
+                <div class="col-xl-4 col-lg-4">
+                    <div class="bd-team-details-info">
+                        <div class="bd-team-details-thumb">
+                            <img src="{{ team.image.url }}" alt="{{ team.name }}">
+                        </div>
+                        <div class="bd-team-details-content">
+                            <h3 class="name">{{ team.name }}</h3>
+                            <span class="designation">{{ team.position }}</span>
+                            
+                            <ul class="info-list">
+                                {% if team.experience %}<li><span>Experience</span> : {{ team.experience }}</li>{% endif %}
+                                {% if team.office %}<li><span>Office</span> : {{ team.office }}</li>{% endif %}
+                                {% if team.phone %}<li><span>Phone Number</span> : {{ team.phone }}</li>{% endif %}
+                            </ul>
+                            {% if team.email %}
+                            <div class="member-email">
+                                <div class="icon">
+                                    <img src="{% static 'images/icon/mail-icon.svg' %}" alt="">
+                                </div>
+                                <div>
+                                    <p>Email Address</p>
+                                    <h6><a href="mailto:{{ team.email }}">{{ team.email }}</a></h6>
+                                </div>
+                            </div>
+                            {% endif %}
+                            <div class="bd-footer-social text-nowrap flex-wrap">
+                                <h6 class="title">Follow Us</h6>
+                                <div class="social-list">
+                                    {% if team.linkedin %}<a href="{{ team.linkedin }}"><i class="fa-brands fa-linkedin-in"></i></a>{% endif %}
+                                    {% if team.facebook %}<a href="{{ team.facebook }}"><i class="fa-brands fa-facebook-f"></i></a>{% endif %}
+                                    {% if team.instagram %}<a href="{{ team.instagram }}"><i class="fa-brands fa-instagram"></i></a>{% endif %}
+                                    {% if team.twitter %}<a href="{{ team.twitter }}"><i class="fa-brands fa-x-twitter"></i></a>{% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-8">
+                    <div class="bd-team-details-about-content">
+                        {{ team.description|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

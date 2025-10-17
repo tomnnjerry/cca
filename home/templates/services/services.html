@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+
+{% endblock seo %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+
+<!-- breadcrumb area start -->
+<section class="bd-breadcrumb-area p-relative fix">
+    <!-- breadcrumb background image -->
+    <div class="bd-breadcrumb-bg" data-background="assets/images/bg/breadcrumb-bg.webp"></div>
+    <div class="bd-breadcrumb-wrapper p-relative">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                        <div class="bd-breadcrumb-content text-center">
+                            <h1 class="bd-breadcrumb-title">Our Services</h1>
+                            <div class="bd-breadcrumb-list">
+                                <span><a href="{% url 'home:home' %}">Home</a></span>
+                                <span>Services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb area end -->
+
+<!-- service area start -->
+<section class="bd-service-area section-space ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="bd-section-title-wrapper text-center section-title-space">
+                    <span class="bd-section-subtitle secondary">Services</span>
+                    <h2 class="bd-section-title black-text">Discover Our Extensive Range of Services</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-30">
+            {% for service in data %}
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="bd-service-three">
+                    <!-- Optional icon: using og_image or banner_image -->
+                    <div class="icon">
+                        <img src="{% static 'CCA-Logo.png' %}" alt="logo" style="width:60px; height:60px;">
+                    </div>
+
+                    <!-- Banner image -->
+                    <div class="thumb">
+                        {% if service.banner_image %}
+                            <img src="{{ service.banner_image.url }}" alt="{{ service.title }}">
+                        {% else %}
+                            <img src="{% static 'assets/images/service/service-3-thumb-default.webp' %}" alt="{{ service.title }}">
+                        {% endif %}
+                    </div>
+
+                    <div class="bd-service-content">
+                        <h5 class="title underline">
+                            <a href="{% url 'home:service_detail' service.slug %}">{{ service.title }}</a>
+                        </h5>
+                        <p class="desc">{{ service.short_description|default:"No description available" }}</p>
+                        <div class="bd-service-btn">
+                            <a class="bd-btn btn-outline-light" href="{% url 'home:service_detail' service.slug %}">
+                                Read More <i class="fa-regular fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                        <div class="bd-service-content-bg">
+                            <!-- Left shape -->
+                            <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 212C0 218.627 5.37258 224 12 224H379.5L311.78 28.2675C305.926 11.3486 289.991 0 272.089 0H0V212Z" fill="white" />
+                            </svg>
+                            <!-- Right shape -->
+                            <svg width="380" height="224" viewBox="0 0 380 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M379.5 212C379.5 218.627 374.127 224 367.5 224H0L67.72 28.2675C73.5736 11.3486 89.5086 0 107.411 0H379.5V212Z" fill="#F4F9FD" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-center">No services available at the moment.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- service area end -->
+
+
+<!-- faq area start -->
+<section class="bd-faq-area section-space p-relative">
+    <div class="bd-faq-shape"><img src="assets/images/shape/about-shape-1.webp" alt=""></div>
+    <div class="container">
+        <div class="row gy-30 justify-content-between align-items-end">
+
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <div class="bd-faq-content-two">
+                    <div class="bd-section-title-wrapper">
+                        <span class="bd-section-subtitle">faqs</span>
+                        <h2 class="bd-section-title">Frequently Asked Questions</h2>
+                    </div>
+                    <div class="bd-faq-thumb">
+                        <img src="{% static 'images/bg/faq-thumb-1.webp' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <div class="bd-common-accordion bd-faq-two-accordion">
+                    <div class="accordion" id="businessAccordion">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What services does Compassionate Care Advisors provide?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="headingOne" data-bs-parent="#businessAccordion">
+                                <div class="accordion-body">
+                                    We offer EMR solutions, digital marketing, patient engagement, workflow optimization, and reputation management for healthcare practices.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How do you ensure data security and compliance?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="headingTwo" data-bs-parent="#businessAccordion">
+                                <div class="accordion-body">
+                                    We follow HIPAA guidelines and implement industry-standard security measures to protect patient data and maintain compliance.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Who can benefit from your services?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="headingThree" data-bs-parent="#businessAccordion">
+                                <div class="accordion-body">
+                                    Healthcare providers, clinics, and hospitals looking to streamline operations, improve patient engagement, and enhance their digital presence.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    How can I get started with Compassionate Care Advisors?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="headingFour" data-bs-parent="#businessAccordion">
+                                <div class="accordion-body">
+                                    You can get started by contacting us through our website or calling our support team to schedule a consultation.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- faq area end -->
+
+
+
+{% endblock body %}
+    
+
+
+{% block js %}
+    
+{% endblock js %}
+    

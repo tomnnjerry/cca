@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block seo %}
+
+{% endblock seo %}
+
+{% block css %}
+    
+{% endblock css %}
+    
+
+
+{% block body %}
+
+ <!-- Body main wrapper start -->
+    <main>
+
+        <!-- breadcrumb area start -->
+        <section class="bd-breadcrumb-area p-relative fix">
+            <!-- breadcrumb background image -->
+            <div class="bd-breadcrumb-bg" data-background="assets/images/bg/breadcrumb-bg.webp"></div>
+            <div class="bd-breadcrumb-wrapper p-relative">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10">
+                            <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                                <div class="bd-breadcrumb-content text-center">
+                                    <h1 class="bd-breadcrumb-title">Contact</h1>
+                                    <div class="bd-breadcrumb-list">
+                                        <span><a href="index.html">Home</a></span>
+                                        <span>Contact</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb area end -->
+
+        <!-- contact area start -->
+        <section class="bd-contact-area section-space">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="bd-section-title-wrapper section-title-space text-center">
+                            <span class="bd-section-subtitle">Contact us</span>
+                            <h2 class="bd-section-title mb-20">Our contact information</h2>
+                            <p class="bd-section-desc">We’re always ready to helps your business. Let’s talk with us</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-30">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="bd-contact-address-box">
+                            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="">
+                                <h6>Email Address</h6>
+                                <p><a href="mailto:ray@compassionatecareadvisors.com"><span class="__cf_email__" data-cfemail="ef8c80819c8e82af88828e8683c18c8082">ray@compassionatecareadvisors.com</span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="bd-contact-address-box">
+                            <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
+                            <div class="">
+                                <h6>Mobile</h6>
+                                <p><a href="tel:+15163409995">+15163409995</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="bd-contact-address-box">
+                            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="">
+                                <h6>Location</h6>
+                                <p><a href="#">Brooklyn, NY 12207, New York</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bd-contact-box">
+                        <div class="bd-contact-form">
+                            <h3 class="bd-section-title mb-25">Get in Touch</h3>
+                            <p class="bd-section-desc">Have a question or feedback? Fill out the form below, and we’ll
+                                respond
+                                promptly!</p>
+                            <form method="POST" action="">
+                                {% csrf_token %}
+                                <div class="row gy-30">
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        {{ form.name }}
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        {{ form.email }}
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        {{ form.phone }}
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        {{ form.company }}
+                                    </div>
+                                    <div class="col-xxl-12">
+                                        {{ form.message }}
+                                        <div class="checkbox-option body-text mt-2">
+                                            {{ form.agree_terms }} <label for="id_agree_terms">I agree to all terms and conditions.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-12">
+                                        <div class="bd-postbox-comment-btn">
+                                            <button type="submit" class="bd-btn btn-primary">Submit Review <i class="fa-regular fa-arrow-right-long"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+{% if messages %}
+  <div class="mb-4">
+    {% for message in messages %}
+      <div class="alert alert-success" role="alert">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+                        </div>
+                        <div class="bd-contact-form-thumb">
+                            <div class="p-relative z-3">
+                                <img src="{% static 'images/bg/bd-contact-page-thumb.webp' %}" alt="">
+                                <div class="bd-contact-cta">
+                                    <div class="icon"><i class="fa-sharp fa-solid fa-phone-volume"></i></div>
+                                    <div class="">
+                                        <p>You May <span class="primary-text fw-bold">Call Us</span> For Appointment</p>
+                                        <h6><a href="tel:+15163409995">+15 163409995</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact area end -->
+
+        <div class="bd-contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d96659.60497914997!2d-73.417192!3d40.792529!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e82991b92a497f%3A0xe22dbbf3c1551b14!2sCompassionate%20Care%20Advisors%20LLC!5e0!3m2!1sen!2sus!4v1760607503331!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- cta area start -->
+        <section class="bd-cta-area section-space-big  p-relative z-3">
+            <div class="bd-cta-shape">
+                <div class="shape-1"><img src="assets/images/shape/cta-shape-1.webp" alt=""></div>
+                <div class="shape-2"><img src="assets/images/shape/cta-shape-2.webp" alt=""></div>
+            </div>
+            <div class="container">
+                <div class="row gy-30 justify-content-between align-items-center">
+                    <div class="col-xl-9 col-lg-9">
+                        <h2 class="bd-section-title black-text"><span class="line">Your need the right direction</span>
+                            <br class="d-none d-lg-block">
+                            for your business, we’ll help you do that.</h2>
+                    </div>
+                    <div class="col-xl-3 col-lg-3">
+                        <div class="bd-cta-btn d-flex justify-content-center">
+                            <img src="assets/images/shape/cta-btn-circle.webp" alt="">
+                            <a href="contact.html" class="link"><i class="fa-regular fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cta area end -->
+
+    </main>
+    
+{% endblock body %}
+    
+
+
+{% block js %}
+    
+{% endblock js %}
+    
